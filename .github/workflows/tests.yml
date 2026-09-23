@@ -1,0 +1,34 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install lightweight test dependencies
+        run: pip install rapidfuzz pyyaml
+      - name: Compile sources
+        run: python -m py_compile arandu_stt/server.py arandu_stt/lexical.py arandu_stt/inventory_sync.py arandu_stt/model_download.py arandu_stt/launcher.py
+      - name: Lexical resolver tests
+        run: python -m unittest discover -s arandu_stt/tests -v
+      - name: Validate app metadata
+        run: |
+          python - <<'PY'
+          import yaml
+          from pathlib import Path
+          root=yaml.safe_load(Path('repository.yaml').read_text())
+          cfg=yaml.safe_load(Path('arandu_stt/config.yaml').read_text())
+          assert root['name']
+          for key in ('name','version','slug','description','arch'):
+              assert cfg.get(key), key
+          assert cfg['slug']=='arandu_stt'
+          assert 'amd64' in cfg['arch']
+          assert cfg.get('discovery') == ['wyoming']
+          PY
