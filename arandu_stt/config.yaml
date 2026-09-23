@@ -1,5 +1,5 @@
 name: Arandu STT
-version: "0.1.0"
+version: "0.1.1"
 slug: arandu_stt
 description: STT PT-BR local com FastConformer INT8, correção contextual e Wyoming
 arch:

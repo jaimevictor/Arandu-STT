@@ -10,7 +10,9 @@ STT local em português do Brasil para Home Assistant Assist, usando FastConform
 4. O serviço anuncia `wyoming` e deve aparecer como descoberto em **Settings > Devices & services**. Aceite a descoberta.
 5. Em **Settings > Voice assistants**, selecione `Arandu STT` como mecanismo de speech-to-text no pipeline desejado.
 
-Se a descoberta automática não aparecer, adicione manualmente a integração **Wyoming Protocol**. Para instalações via App, prefira a descoberta automática; a porta interna do serviço é `10350/tcp`.
+Se a descoberta automática não aparecer, publique a porta `10350/tcp` nas opções de rede do App e adicione manualmente a integração **Wyoming Protocol** usando o IP do Home Assistant e a porta `10350`.
+
+Nota técnica: o URI de descoberta automática usa o hostname informado pelo Supervisor em `/addons/self/info`. Não use `arandu-stt` fixo; Apps instalados por repositório GitHub recebem prefixo interno do repositório.
 
 ## Opções
 

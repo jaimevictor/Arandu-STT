@@ -24,6 +24,7 @@ from wyoming.info import AsrModel, AsrProgram, Attribution, Describe, Info
 from wyoming.server import AsyncEventHandler, AsyncServer
 
 from lexical import AranduLexicalResolver
+from wyoming_discovery import DiscoveryError, publish_wyoming_discovery
 
 HERE = Path(__file__).resolve().parent
 LOG = logging.getLogger('arandu')
@@ -46,7 +47,7 @@ def build_info() -> Info:
         description='FastConformer PT-BR CTC INT8 + Arandu lexical resolver',
         attribution=attribution,
         installed=True,
-        version='0.1.0',
+        version='0.1.1',
         requires_external_vad=True,
         supports_transcript_streaming=False,
         models=[AsrModel(
@@ -54,7 +55,7 @@ def build_info() -> Info:
             description='FastConformer PT-BR INT8 ONNX + contextual sanitation',
             attribution=attribution,
             installed=True,
-            version='0.1.0',
+            version='0.1.1',
             languages=['pt-BR', 'pt'],
         )],
     )])
@@ -144,6 +145,9 @@ class Handler(AsyncEventHandler):
         self.invalid = False
         self.finished = False
         self.armed = False
+        self.chunk_count = 0
+        self.started = False
+        LOG.info('[WYOMING] client connected')
 
     def reset(self) -> None:
         self.converter = AudioChunkConverter(rate=16000, width=2, channels=1)
@@ -152,15 +156,19 @@ class Handler(AsyncEventHandler):
         self.invalid = False
         self.finished = False
         self.armed = True
+        self.chunk_count = 0
+        self.started = False
 
     async def handle_event(self, event: Event) -> bool:
         if Describe.is_type(event.type):
+            LOG.info('[WYOMING] Describe')
             await self.write_event(build_info().event())
             return True
         if Transcribe.is_type(event.type):
             req = Transcribe.from_event(event)
             self.reset()
             requested = getattr(req, 'name', None)
+            LOG.info('[WYOMING] Transcribe model=%s', requested or '<default>')
             if requested and requested != NAME:
                 LOG.warning('Modelo pedido desconhecido: %s', requested)
                 self.invalid = True
@@ -168,6 +176,10 @@ class Handler(AsyncEventHandler):
         if AudioStart.is_type(event.type):
             if not self.armed or self.finished:
                 self.reset()
+            start = AudioStart.from_event(event)
+            self.started = True
+            LOG.info('[WYOMING] AudioStart rate=%s width=%s channels=%s',
+                     start.rate, start.width, start.channels)
             return True
         if AudioChunk.is_type(event.type):
             if self.finished:
@@ -187,8 +199,9 @@ class Handler(AsyncEventHandler):
                     raise ValueError('Audio excedeu 35s')
                 self.parts.append(converted.audio)
                 self.total += len(converted.audio)
+                self.chunk_count += 1
             except (ValueError, OverflowError, TypeError) as exc:
-                LOG.warning('Audio descartado: %s', exc)
+                LOG.warning('[WYOMING] Audio invalid: %s', exc)
                 self.invalid = True
                 self.parts.clear()
                 self.total = 0
@@ -200,6 +213,8 @@ class Handler(AsyncEventHandler):
             self.finished = True
             pcm = b''.join(self.parts)
             duration = len(pcm) / 32000.0
+            LOG.info('[WYOMING] AudioStop chunks=%s bytes=%s duration=%.3f',
+                     self.chunk_count, len(pcm), duration)
             raw = final = ''
             infer = wait = correction_ms = 0.0
             changes = 0
@@ -221,6 +236,7 @@ class Handler(AsyncEventHandler):
                     outcome = 'failure'
                     LOG.exception('Erro de inferencia/correcao')
             await self.write_event(Transcript(text=final, language='pt-BR').event())
+            LOG.info('[WYOMING] Transcript sent')
             elapsed = time.perf_counter() - stop
             self.metrics.log(duration_s=duration, inference_s=infer, correction_ms=correction_ms,
                              queue_s=wait, after_stop_s=elapsed, raw=raw, final=final,
@@ -240,6 +256,7 @@ def parse_args(argv=None):
     p.add_argument('--profile', choices=('raw','normalize_only','acoustic_only','fuzzy_only','inventory_only','full'), default='full')
     p.add_argument('--metrics', type=Path, default=Path('/data/metrics.jsonl'))
     p.add_argument('--debug-text', action='store_true')
+    p.add_argument('--no-discovery', action='store_true')
     a = p.parse_args(argv)
     if not 1 <= a.threads <= 8:
         p.error('--threads precisa estar entre 1 e 8')
@@ -256,7 +273,22 @@ async def main(argv=None):
     metrics = Metrics(a.metrics, a.debug_text)
     server = AsyncServer.from_uri(a.uri)
     LOG.info('PRONTO: Arandu STT Wyoming %s | profile=%s | padding=%sms', a.uri, a.profile, a.padding_ms)
-    await server.run(partial(Handler, engine, resolver, metrics, a.padding_ms, a.profile))
+    handler_factory = partial(Handler, engine, resolver, metrics, a.padding_ms, a.profile)
+    if hasattr(server, 'start'):
+        await server.start(handler_factory)
+        if not a.no_discovery:
+            try:
+                publish_wyoming_discovery(port=10350)
+            except DiscoveryError as exc:
+                LOG.warning('[DISCOVERY] %s', exc)
+        await server._server.serve_forever()
+        return
+    if not a.no_discovery:
+        try:
+            publish_wyoming_discovery(port=10350)
+        except DiscoveryError as exc:
+            LOG.warning('[DISCOVERY] %s', exc)
+    await server.run(handler_factory)
 
 
 if __name__ == '__main__':

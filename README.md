@@ -2,7 +2,7 @@
 
 Speech-to-text local PT-BR para Home Assistant Assist.
 
-**MVP 0.1.0:** FastConformer PT-BR CTC INT8 + Arandu Lexical Resolver + Wyoming.
+**MVP 0.1.1:** FastConformer PT-BR CTC INT8 + Arandu Lexical Resolver + Wyoming.
 
 ## Arquitetura
 
@@ -33,6 +33,13 @@ O projeto é um **Home Assistant App** (antigo add-on). Não substitui nem dupli
 6. Selecione **Arandu STT** no pipeline do Assist.
 
 > O App atualmente é publicado/testado para `amd64`.
+
+## Descoberta Wyoming
+
+O App publica discovery no Supervisor com `service: wyoming` e `config.uri`.
+O host do URI vem de `/addons/self/info`, porque Apps instalados por repositório GitHub usam prefixo de repositório no DNS interno. Não use `arandu-stt` como host fixo para discovery.
+
+Fallback manual: publique a porta `10350/tcp` nas opções de rede do App e adicione **Wyoming Protocol** usando o IP do Home Assistant e a porta `10350`.
 
 ## Privacidade
 
