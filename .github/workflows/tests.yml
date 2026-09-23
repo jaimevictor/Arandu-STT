@@ -12,10 +12,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install lightweight test dependencies
-        run: pip install rapidfuzz pyyaml
+      - name: Install test dependencies
+        run: pip install numpy rapidfuzz pyyaml websockets wyoming
       - name: Compile sources
-        run: python -m py_compile arandu_stt/server.py arandu_stt/lexical.py arandu_stt/inventory_sync.py arandu_stt/model_download.py arandu_stt/launcher.py
+        run: python -m py_compile arandu_stt/server.py arandu_stt/lexical.py arandu_stt/inventory_sync.py arandu_stt/model_download.py arandu_stt/launcher.py arandu_stt/wyoming_discovery.py
       - name: Lexical resolver tests
         run: python -m unittest discover -s arandu_stt/tests -v
       - name: Validate app metadata
@@ -28,7 +28,9 @@ jobs:
           assert root['name']
           for key in ('name','version','slug','description','arch'):
               assert cfg.get(key), key
+          assert cfg['version'] == '0.1.1'
           assert cfg['slug']=='arandu_stt'
           assert 'amd64' in cfg['arch']
           assert cfg.get('discovery') == ['wyoming']
+          assert cfg['ports']['10350/tcp'] is None
           PY
