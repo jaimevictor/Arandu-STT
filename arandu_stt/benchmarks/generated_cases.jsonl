@@ -1,0 +1,800 @@
+{"category": "synthetic_agua_delete", "raw": "tem vazameto em algum lugar", "expected": "tem vazamento em algum lugar"}
+{"category": "clean_agua", "raw": "tem vazamento em algum lugar", "expected": "tem vazamento em algum lugar"}
+{"category": "synthetic_ambiente_transpose", "raw": "me fala o CO2 da vaarnda", "expected": "me fala o CO2 da varanda"}
+{"category": "clean_ambiente", "raw": "me fala o CO2 da varanda", "expected": "me fala o CO2 da varanda"}
+{"category": "synthetic_calendario_substitute", "raw": "o que eu tenho sábodo", "expected": "o que eu tenho sábado"}
+{"category": "clean_calendario", "raw": "o que eu tenho sábado", "expected": "o que eu tenho sábado"}
+{"category": "synthetic_cenas_delete", "raw": "liga a cena trablho", "expected": "liga a cena trabalho"}
+{"category": "clean_cenas", "raw": "liga a cena trabalho", "expected": "liga a cena trabalho"}
+{"category": "synthetic_clima_externo_transpose", "raw": "vai cohver sábado", "expected": "vai chover sábado"}
+{"category": "clean_clima_externo", "raw": "vai chover sábado", "expected": "vai chover sábado"}
+{"category": "synthetic_climatizacao_substitute", "raw": "como está o desumidificador do quauto", "expected": "como está o desumidificador do quarto"}
+{"category": "clean_climatizacao", "raw": "como está o desumidificador do quarto", "expected": "como está o desumidificador do quarto"}
+{"category": "synthetic_comunicacao_delete", "raw": "avia no quarto que eu estou chamando", "expected": "avisa no quarto que eu estou chamando"}
+{"category": "clean_comunicacao", "raw": "avisa no quarto que eu estou chamando", "expected": "avisa no quarto que eu estou chamando"}
+{"category": "synthetic_consulta_transpose", "raw": "o que está conecatdo no escritório de Bruna", "expected": "o que está conectado no escritório de Bruna"}
+{"category": "clean_consulta", "raw": "o que está conectado no escritório de Bruna", "expected": "o que está conectado no escritório de Bruna"}
+{"category": "synthetic_conversa_substitute", "raw": "deuxa pra lá", "expected": "deixa pra lá"}
+{"category": "clean_conversa", "raw": "deixa pra lá", "expected": "deixa pra lá"}
+{"category": "synthetic_cortinas_delete", "raw": "levanta a persiana da coziha", "expected": "levanta a persiana da cozinha"}
+{"category": "clean_cortinas", "raw": "levanta a persiana da cozinha", "expected": "levanta a persiana da cozinha"}
+{"category": "synthetic_dispositivo_transpose", "raw": "como está o computador do quarto de hósepdes", "expected": "como está o computador do quarto de hóspedes"}
+{"category": "clean_dispositivo", "raw": "como está o computador do quarto de hóspedes", "expected": "como está o computador do quarto de hóspedes"}
+{"category": "synthetic_eletrodomesticos_substitute", "raw": "como está a cefeteira", "expected": "como está a cafeteira"}
+{"category": "clean_eletrodomesticos", "raw": "como está a cafeteira", "expected": "como está a cafeteira"}
+{"category": "synthetic_energia_delete", "raw": "qual a bateria da teleisão", "expected": "qual a bateria da televisão"}
+{"category": "clean_energia", "raw": "qual a bateria da televisão", "expected": "qual a bateria da televisão"}
+{"category": "synthetic_grupos_transpose", "raw": "desliga as disopsitivos do casa toda", "expected": "desliga as dispositivos do casa toda"}
+{"category": "clean_grupos", "raw": "desliga as dispositivos do casa toda", "expected": "desliga as dispositivos do casa toda"}
+{"category": "synthetic_iluminacao_substitute", "raw": "esquunta a cor da luz da sala", "expected": "esquenta a cor da luz da sala"}
+{"category": "clean_iluminacao", "raw": "esquenta a cor da luz da sala", "expected": "esquenta a cor da luz da sala"}
+{"category": "synthetic_impressao_3d_delete", "raw": "a impressão termiou", "expected": "a impressão terminou"}
+{"category": "clean_impressao_3d", "raw": "a impressão terminou", "expected": "a impressão terminou"}
+{"category": "synthetic_informacao_unchanged_no_eligible_token", "raw": "me diz a hora", "expected": "me diz a hora"}
+{"category": "clean_informacao", "raw": "me diz a hora", "expected": "me diz a hora"}
+{"category": "synthetic_jardim_substitute", "raw": "como está o robô coitador", "expected": "como está o robô cortador"}
+{"category": "clean_jardim", "raw": "como está o robô cortador", "expected": "como está o robô cortador"}
+{"category": "synthetic_limpeza_delete", "raw": "vota o robô aspirador pra base", "expected": "volta o robô aspirador pra base"}
+{"category": "clean_limpeza", "raw": "volta o robô aspirador pra base", "expected": "volta o robô aspirador pra base"}
+{"category": "synthetic_localizacao_transpose", "raw": "faz meu celular tcoar", "expected": "faz meu celular tocar"}
+{"category": "clean_localizacao", "raw": "faz meu celular tocar", "expected": "faz meu celular tocar"}
+{"category": "synthetic_midia_substitute", "raw": "volta um mieuto", "expected": "volta um minuto"}
+{"category": "clean_midia", "raw": "volta um minuto", "expected": "volta um minuto"}
+{"category": "synthetic_presenca_delete", "raw": "confere se algém está no quintal", "expected": "confere se alguém está no quintal"}
+{"category": "clean_presenca", "raw": "confere se alguém está no quintal", "expected": "confere se alguém está no quintal"}
+{"category": "synthetic_rotinas_transpose", "raw": "o que aidna está ligado", "expected": "o que ainda está ligado"}
+{"category": "clean_rotinas", "raw": "o que ainda está ligado", "expected": "o que ainda está ligado"}
+{"category": "synthetic_satelite_unchanged_no_eligible_token", "raw": "toca rock aqui", "expected": "toca rock aqui"}
+{"category": "clean_satelite", "raw": "toca rock aqui", "expected": "toca rock aqui"}
+{"category": "synthetic_seguranca_delete", "raw": "feche o porão", "expected": "feche o portão"}
+{"category": "clean_seguranca", "raw": "feche o portão", "expected": "feche o portão"}
+{"category": "synthetic_tempo_transpose", "raw": "me dá mais quizne minutos", "expected": "me dá mais quinze minutos"}
+{"category": "clean_tempo", "raw": "me dá mais quinze minutos", "expected": "me dá mais quinze minutos"}
+{"category": "synthetic_agua_substitute", "raw": "a cuixa d'água está cheia", "expected": "a caixa d'água está cheia"}
+{"category": "clean_agua", "raw": "a caixa d'água está cheia", "expected": "a caixa d'água está cheia"}
+{"category": "synthetic_ambiente_delete", "raw": "como está a tempertura do banheiro", "expected": "como está a temperatura do banheiro"}
+{"category": "clean_ambiente", "raw": "como está a temperatura do banheiro", "expected": "como está a temperatura do banheiro"}
+{"category": "synthetic_calendario_transpose", "raw": "remove cnosulta da agenda", "expected": "remove consulta da agenda"}
+{"category": "clean_calendario", "raw": "remove consulta da agenda", "expected": "remove consulta da agenda"}
+{"category": "synthetic_cenas_substitute", "raw": "modo boa noate", "expected": "modo boa noite"}
+{"category": "clean_cenas", "raw": "modo boa noite", "expected": "modo boa noite"}
+{"category": "synthetic_clima_externo_delete", "raw": "vai chover domino", "expected": "vai chover domingo"}
+{"category": "clean_clima_externo", "raw": "vai chover domingo", "expected": "vai chover domingo"}
+{"category": "synthetic_climatizacao_transpose", "raw": "aumenta o ventildaor da sala", "expected": "aumenta o ventilador da sala"}
+{"category": "clean_climatizacao", "raw": "aumenta o ventilador da sala", "expected": "aumenta o ventilador da sala"}
+{"category": "synthetic_comunicacao_substitute", "raw": "manda um recado pra escritório de Jaiue", "expected": "manda um recado pra escritório de Jaime"}
+{"category": "clean_comunicacao", "raw": "manda um recado pra escritório de Jaime", "expected": "manda um recado pra escritório de Jaime"}
+{"category": "synthetic_consulta_delete", "raw": "o que tem no escritório de Jame", "expected": "o que tem no escritório de Jaime"}
+{"category": "clean_consulta", "raw": "o que tem no escritório de Jaime", "expected": "o que tem no escritório de Jaime"}
+{"category": "synthetic_conversa_unchanged_no_eligible_token", "raw": "sim", "expected": "sim"}
+{"category": "clean_conversa", "raw": "sim", "expected": "sim"}
+{"category": "synthetic_cortinas_substitute", "raw": "ajuita a porta da garagem para 75%", "expected": "ajusta a porta da garagem para 75%"}
+{"category": "clean_cortinas", "raw": "ajusta a porta da garagem para 75%", "expected": "ajusta a porta da garagem para 75%"}
+{"category": "synthetic_dispositivo_delete", "raw": "qual o estado da toada do corredor", "expected": "qual o estado da tomada do corredor"}
+{"category": "clean_dispositivo", "raw": "qual o estado da tomada do corredor", "expected": "qual o estado da tomada do corredor"}
+{"category": "synthetic_eletrodomesticos_transpose", "raw": "qual o estado do frono", "expected": "qual o estado do forno"}
+{"category": "clean_eletrodomesticos", "raw": "qual o estado do forno", "expected": "qual o estado do forno"}
+{"category": "synthetic_energia_substitute", "raw": "quanto de baturia tem o abajur", "expected": "quanto de bateria tem o abajur"}
+{"category": "clean_energia", "raw": "quanto de bateria tem o abajur", "expected": "quanto de bateria tem o abajur"}
+{"category": "synthetic_grupos_delete", "raw": "tem algua coisa ligada no área íntima", "expected": "tem alguma coisa ligada no área íntima"}
+{"category": "clean_grupos", "raw": "tem alguma coisa ligada no área íntima", "expected": "tem alguma coisa ligada no área íntima"}
+{"category": "synthetic_iluminacao_transpose", "raw": "ajsuta o brilho da fita LED da varanda para 100%", "expected": "ajusta o brilho da fita LED da varanda para 100%"}
+{"category": "clean_iluminacao", "raw": "ajusta o brilho da fita LED da varanda para 100%", "expected": "ajusta o brilho da fita LED da varanda para 100%"}
+{"category": "synthetic_impressao_3d_substitute", "raw": "retoma a imoressão", "expected": "retoma a impressão"}
+{"category": "clean_impressao_3d", "raw": "retoma a impressão", "expected": "retoma a impressão"}
+{"category": "synthetic_informacao_unchanged_no_eligible_token", "raw": "que dia é hoje", "expected": "que dia é hoje"}
+{"category": "clean_informacao", "raw": "que dia é hoje", "expected": "que dia é hoje"}
+{"category": "synthetic_jardim_transpose", "raw": "o cortador está trbaalhando", "expected": "o cortador está trabalhando"}
+{"category": "clean_jardim", "raw": "o cortador está trabalhando", "expected": "o cortador está trabalhando"}
+{"category": "synthetic_limpeza_substitute", "raw": "liga o robô aspiiador", "expected": "liga o robô aspirador"}
+{"category": "clean_limpeza", "raw": "liga o robô aspirador", "expected": "liga o robô aspirador"}
+{"category": "synthetic_localizacao_delete", "raw": "toca meu tlefone", "expected": "toca meu telefone"}
+{"category": "clean_localizacao", "raw": "toca meu telefone", "expected": "toca meu telefone"}
+{"category": "synthetic_midia_transpose", "raw": "reproduz mihna playlist", "expected": "reproduz minha playlist"}
+{"category": "clean_midia", "raw": "reproduz minha playlist", "expected": "reproduz minha playlist"}
+{"category": "synthetic_presenca_substitute", "raw": "a garagem está ocupaaa", "expected": "a garagem está ocupada"}
+{"category": "clean_presenca", "raw": "a garagem está ocupada", "expected": "a garagem está ocupada"}
+{"category": "synthetic_rotinas_delete", "raw": "tem algum disposiivo ligado", "expected": "tem algum dispositivo ligado"}
+{"category": "clean_rotinas", "raw": "tem algum dispositivo ligado", "expected": "tem algum dispositivo ligado"}
+{"category": "synthetic_satelite_transpose", "raw": "volume daqiu em 50%", "expected": "volume daqui em 50%"}
+{"category": "clean_satelite", "raw": "volume daqui em 50%", "expected": "volume daqui em 50%"}
+{"category": "synthetic_seguranca_substitute", "raw": "destranca a fechidura da garagem", "expected": "destranca a fechadura da garagem"}
+{"category": "clean_seguranca", "raw": "destranca a fechadura da garagem", "expected": "destranca a fechadura da garagem"}
+{"category": "synthetic_tempo_delete", "raw": "pode acbar o timer", "expected": "pode acabar o timer"}
+{"category": "clean_tempo", "raw": "pode acabar o timer", "expected": "pode acabar o timer"}
+{"category": "synthetic_agua_transpose", "raw": "qual o nvíel da caixa d'água", "expected": "qual o nível da caixa d'água"}
+{"category": "clean_agua", "raw": "qual o nível da caixa d'água", "expected": "qual o nível da caixa d'água"}
+{"category": "synthetic_ambiente_substitute", "raw": "tá meito úmido na garagem", "expected": "tá muito úmido na garagem"}
+{"category": "clean_ambiente", "raw": "tá muito úmido na garagem", "expected": "tá muito úmido na garagem"}
+{"category": "synthetic_calendario_delete", "raw": "cria um compromisso hoje às meio-dia para dentisa", "expected": "cria um compromisso hoje às meio-dia para dentista"}
+{"category": "clean_calendario", "raw": "cria um compromisso hoje às meio-dia para dentista", "expected": "cria um compromisso hoje às meio-dia para dentista"}
+{"category": "synthetic_cenas_transpose", "raw": "ativa a cena cniema", "expected": "ativa a cena cinema"}
+{"category": "clean_cenas", "raw": "ativa a cena cinema", "expected": "ativa a cena cinema"}
+{"category": "synthetic_clima_externo_substitute", "raw": "como está o temoo", "expected": "como está o tempo"}
+{"category": "clean_clima_externo", "raw": "como está o tempo", "expected": "como está o tempo"}
+{"category": "synthetic_climatizacao_delete", "raw": "desligue o ventilador do escrtório", "expected": "desligue o ventilador do escritório"}
+{"category": "clean_climatizacao", "raw": "desligue o ventilador do escritório", "expected": "desligue o ventilador do escritório"}
+{"category": "synthetic_comunicacao_transpose", "raw": "faz uma ligação para Jaiem", "expected": "faz uma ligação para Jaime"}
+{"category": "clean_comunicacao", "raw": "faz uma ligação para Jaime", "expected": "faz uma ligação para Jaime"}
+{"category": "synthetic_consulta_substitute", "raw": "cadê a tomuda", "expected": "cadê a tomada"}
+{"category": "clean_consulta", "raw": "cadê a tomada", "expected": "cadê a tomada"}
+{"category": "synthetic_conversa_delete", "raw": "repee", "expected": "repete"}
+{"category": "clean_conversa", "raw": "repete", "expected": "repete"}
+{"category": "synthetic_cortinas_transpose", "raw": "a cortina do escritório está abetra", "expected": "a cortina do escritório está aberta"}
+{"category": "clean_cortinas", "raw": "a cortina do escritório está aberta", "expected": "a cortina do escritório está aberta"}
+{"category": "synthetic_dispositivo_substitute", "raw": "desativa a lâmpada da gaiagem", "expected": "desativa a lâmpada da garagem"}
+{"category": "clean_dispositivo", "raw": "desativa a lâmpada da garagem", "expected": "desativa a lâmpada da garagem"}
+{"category": "synthetic_eletrodomesticos_delete", "raw": "quanto tempo fata na lava-louças", "expected": "quanto tempo falta na lava-louças"}
+{"category": "clean_eletrodomesticos", "raw": "quanto tempo falta na lava-louças", "expected": "quanto tempo falta na lava-louças"}
+{"category": "synthetic_energia_transpose", "raw": "quanto o ventilador está consmuindo", "expected": "quanto o ventilador está consumindo"}
+{"category": "clean_energia", "raw": "quanto o ventilador está consumindo", "expected": "quanto o ventilador está consumindo"}
+{"category": "synthetic_grupos_substitute", "raw": "apaga as tomadas do ander de cima", "expected": "apaga as tomadas do andar de cima"}
+{"category": "clean_grupos", "raw": "apaga as tomadas do andar de cima", "expected": "apaga as tomadas do andar de cima"}
+{"category": "synthetic_iluminacao_delete", "raw": "clareia o escritrio de Jaime", "expected": "clareia o escritório de Jaime"}
+{"category": "clean_iluminacao", "raw": "clareia o escritório de Jaime", "expected": "clareia o escritório de Jaime"}
+{"category": "synthetic_impressao_3d_transpose", "raw": "como está a imprsesora 3D", "expected": "como está a impressora 3D"}
+{"category": "clean_impressao_3d", "raw": "como está a impressora 3D", "expected": "como está a impressora 3D"}
+{"category": "synthetic_informacao_substitute", "raw": "que horus é", "expected": "que horas é"}
+{"category": "clean_informacao", "raw": "que horas é", "expected": "que horas é"}
+{"category": "synthetic_jardim_delete", "raw": "começa a crtar a grama", "expected": "começa a cortar a grama"}
+{"category": "clean_jardim", "raw": "começa a cortar a grama", "expected": "começa a cortar a grama"}
+{"category": "synthetic_limpeza_transpose", "raw": "cacnela a limpeza", "expected": "cancela a limpeza"}
+{"category": "clean_limpeza", "raw": "cancela a limpeza", "expected": "cancela a limpeza"}
+{"category": "synthetic_localizacao_substitute", "raw": "eu perdi meu calular", "expected": "eu perdi meu celular"}
+{"category": "clean_localizacao", "raw": "eu perdi meu celular", "expected": "eu perdi meu celular"}
+{"category": "synthetic_midia_delete", "raw": "manda a música para speaer do quarto", "expected": "manda a música para speaker do quarto"}
+{"category": "clean_midia", "raw": "manda a música para speaker do quarto", "expected": "manda a música para speaker do quarto"}
+{"category": "synthetic_presenca_transpose", "raw": "você sabe onde está Bruan", "expected": "você sabe onde está Bruna"}
+{"category": "clean_presenca", "raw": "você sabe onde está Bruna", "expected": "você sabe onde está Bruna"}
+{"category": "synthetic_rotinas_substitute", "raw": "tem alguma coisa lagada", "expected": "tem alguma coisa ligada"}
+{"category": "clean_rotinas", "raw": "tem alguma coisa ligada", "expected": "tem alguma coisa ligada"}
+{"category": "synthetic_satelite_unchanged_no_eligible_token", "raw": "tira você do mudo", "expected": "tira você do mudo"}
+{"category": "clean_satelite", "raw": "tira você do mudo", "expected": "tira você do mudo"}
+{"category": "synthetic_seguranca_transpose", "raw": "abre a fechadura da porat da frente", "expected": "abre a fechadura da porta da frente"}
+{"category": "clean_seguranca", "raw": "abre a fechadura da porta da frente", "expected": "abre a fechadura da porta da frente"}
+{"category": "synthetic_tempo_substitute", "raw": "me acoraa às seis da tarde", "expected": "me acorda às seis da tarde"}
+{"category": "clean_tempo", "raw": "me acorda às seis da tarde", "expected": "me acorda às seis da tarde"}
+{"category": "synthetic_agua_delete", "raw": "algum sensor de água diparou", "expected": "algum sensor de água disparou"}
+{"category": "clean_agua", "raw": "algum sensor de água disparou", "expected": "algum sensor de água disparou"}
+{"category": "synthetic_ambiente_transpose", "raw": "como está o ríudo no escritório de Bruna", "expected": "como está o ruído no escritório de Bruna"}
+{"category": "clean_ambiente", "raw": "como está o ruído no escritório de Bruna", "expected": "como está o ruído no escritório de Bruna"}
+{"category": "synthetic_calendario_substitute", "raw": "tira almoço da minha ageada", "expected": "tira almoço da minha agenda"}
+{"category": "clean_calendario", "raw": "tira almoço da minha agenda", "expected": "tira almoço da minha agenda"}
+{"category": "synthetic_cenas_delete", "raw": "qero a cena boa noite", "expected": "quero a cena boa noite"}
+{"category": "clean_cenas", "raw": "quero a cena boa noite", "expected": "quero a cena boa noite"}
+{"category": "synthetic_clima_externo_transpose", "raw": "como vai estar o temop amanhã", "expected": "como vai estar o tempo amanhã"}
+{"category": "clean_clima_externo", "raw": "como vai estar o tempo amanhã", "expected": "como vai estar o tempo amanhã"}
+{"category": "synthetic_climatizacao_substitute", "raw": "bota o veetilador da sala pra funcionar", "expected": "bota o ventilador da sala pra funcionar"}
+{"category": "clean_climatizacao", "raw": "bota o ventilador da sala pra funcionar", "expected": "bota o ventilador da sala pra funcionar"}
+{"category": "synthetic_comunicacao_delete", "raw": "chaa Jaime", "expected": "chama Jaime"}
+{"category": "clean_comunicacao", "raw": "chama Jaime", "expected": "chama Jaime"}
+{"category": "synthetic_consulta_transpose", "raw": "cadê o abajru", "expected": "cadê o abajur"}
+{"category": "clean_consulta", "raw": "cadê o abajur", "expected": "cadê o abajur"}
+{"category": "synthetic_conversa_substitute", "raw": "canceea isso", "expected": "cancela isso"}
+{"category": "clean_conversa", "raw": "cancela isso", "expected": "cancela isso"}
+{"category": "synthetic_cortinas_delete", "raw": "coloca a persiana do qarto em metade", "expected": "coloca a persiana do quarto em metade"}
+{"category": "clean_cortinas", "raw": "coloca a persiana do quarto em metade", "expected": "coloca a persiana do quarto em metade"}
+{"category": "synthetic_dispositivo_transpose", "raw": "liga o ventilador do escritório de Jiame", "expected": "liga o ventilador do escritório de Jaime"}
+{"category": "clean_dispositivo", "raw": "liga o ventilador do escritório de Jaime", "expected": "liga o ventilador do escritório de Jaime"}
+{"category": "synthetic_eletrodomesticos_substitute", "raw": "qual o estado da cafeteura", "expected": "qual o estado da cafeteira"}
+{"category": "clean_eletrodomesticos", "raw": "qual o estado da cafeteira", "expected": "qual o estado da cafeteira"}
+{"category": "synthetic_energia_delete", "raw": "desative a tomaa do computador", "expected": "desative a tomada do computador"}
+{"category": "clean_energia", "raw": "desative a tomada do computador", "expected": "desative a tomada do computador"}
+{"category": "synthetic_grupos_transpose", "raw": "como estão as dispostiivos do casa toda", "expected": "como estão as dispositivos do casa toda"}
+{"category": "clean_grupos", "raw": "como estão as dispositivos do casa toda", "expected": "como estão as dispositivos do casa toda"}
+{"category": "synthetic_iluminacao_substitute", "raw": "deuxa a abajur do escritório mais branca", "expected": "deixa a abajur do escritório mais branca"}
+{"category": "clean_iluminacao", "raw": "deixa a abajur do escritório mais branca", "expected": "deixa a abajur do escritório mais branca"}
+{"category": "synthetic_impressao_3d_delete", "raw": "segura a imressão", "expected": "segura a impressão"}
+{"category": "clean_impressao_3d", "raw": "segura a impressão", "expected": "segura a impressão"}
+{"category": "synthetic_informacao_unchanged_no_eligible_token", "raw": "vê a hora pra mim", "expected": "vê a hora pra mim"}
+{"category": "clean_informacao", "raw": "vê a hora pra mim", "expected": "vê a hora pra mim"}
+{"category": "synthetic_jardim_substitute", "raw": "monda o cortador pra base", "expected": "manda o cortador pra base"}
+{"category": "clean_jardim", "raw": "manda o cortador pra base", "expected": "manda o cortador pra base"}
+{"category": "synthetic_limpeza_delete", "raw": "para o robô aspiador", "expected": "para o robô aspirador"}
+{"category": "clean_limpeza", "raw": "para o robô aspirador", "expected": "para o robô aspirador"}
+{"category": "synthetic_localizacao_transpose", "raw": "onde está meu tleefone", "expected": "onde está meu telefone"}
+{"category": "clean_localizacao", "raw": "onde está meu telefone", "expected": "onde está meu telefone"}
+{"category": "synthetic_midia_substitute", "raw": "repruduz rock na casa toda", "expected": "reproduz rock na casa toda"}
+{"category": "clean_midia", "raw": "reproduz rock na casa toda", "expected": "reproduz rock na casa toda"}
+{"category": "synthetic_presenca_delete", "raw": "confere se Jaime está na área de servio", "expected": "confere se Jaime está na área de serviço"}
+{"category": "clean_presenca", "raw": "confere se Jaime está na área de serviço", "expected": "confere se Jaime está na área de serviço"}
+{"category": "synthetic_rotinas_transpose", "raw": "modo modo trablaho", "expected": "modo modo trabalho"}
+{"category": "clean_rotinas", "raw": "modo modo trabalho", "expected": "modo modo trabalho"}
+{"category": "synthetic_satelite_substitute", "raw": "liga a luz diqui", "expected": "liga a luz daqui"}
+{"category": "clean_satelite", "raw": "liga a luz daqui", "expected": "liga a luz daqui"}
+{"category": "synthetic_seguranca_delete", "raw": "abre a fechadura da entraa", "expected": "abre a fechadura da entrada"}
+{"category": "clean_seguranca", "raw": "abre a fechadura da entrada", "expected": "abre a fechadura da entrada"}
+{"category": "synthetic_tempo_transpose", "raw": "colcoa um alarme para oito e meia", "expected": "coloca um alarme para oito e meia"}
+{"category": "clean_tempo", "raw": "coloca um alarme para oito e meia", "expected": "coloca um alarme para oito e meia"}
+{"category": "synthetic_agua_substitute", "raw": "quanuo de água tem no reservatório", "expected": "quanto de água tem no reservatório"}
+{"category": "clean_agua", "raw": "quanto de água tem no reservatório", "expected": "quanto de água tem no reservatório"}
+{"category": "synthetic_ambiente_delete", "raw": "qanto está a luminosidade no quarto", "expected": "quanto está a luminosidade no quarto"}
+{"category": "clean_ambiente", "raw": "quanto está a luminosidade no quarto", "expected": "quanto está a luminosidade no quarto"}
+{"category": "synthetic_calendario_transpose", "raw": "que horas é reunioã", "expected": "que horas é reunião"}
+{"category": "clean_calendario", "raw": "que horas é reunião", "expected": "que horas é reunião"}
+{"category": "synthetic_cenas_substitute", "raw": "couoca o modo leitura", "expected": "coloca o modo leitura"}
+{"category": "clean_cenas", "raw": "coloca o modo leitura", "expected": "coloca o modo leitura"}
+{"category": "synthetic_clima_externo_delete", "raw": "vai chovr amanhã", "expected": "vai chover amanhã"}
+{"category": "clean_clima_externo", "raw": "vai chover amanhã", "expected": "vai chover amanhã"}
+{"category": "synthetic_climatizacao_transpose", "raw": "diminui o ventiladro da sala", "expected": "diminui o ventilador da sala"}
+{"category": "clean_climatizacao", "raw": "diminui o ventilador da sala", "expected": "diminui o ventilador da sala"}
+{"category": "synthetic_comunicacao_substitute", "raw": "faz uma ligaaão para mãe", "expected": "faz uma ligação para mãe"}
+{"category": "clean_comunicacao", "raw": "faz uma ligação para mãe", "expected": "faz uma ligação para mãe"}
+{"category": "synthetic_consulta_delete", "raw": "o que está conctado no quarto", "expected": "o que está conectado no quarto"}
+{"category": "clean_consulta", "raw": "o que está conectado no quarto", "expected": "o que está conectado no quarto"}
+{"category": "synthetic_conversa_unchanged_no_eligible_token", "raw": "fala de novo", "expected": "fala de novo"}
+{"category": "clean_conversa", "raw": "fala de novo", "expected": "fala de novo"}
+{"category": "synthetic_cortinas_substitute", "raw": "pode abrir a persaana da cozinha", "expected": "pode abrir a persiana da cozinha"}
+{"category": "clean_cortinas", "raw": "pode abrir a persiana da cozinha", "expected": "pode abrir a persiana da cozinha"}
+{"category": "synthetic_dispositivo_delete", "raw": "o ventilador do escritóio de Jaime está ligado", "expected": "o ventilador do escritório de Jaime está ligado"}
+{"category": "clean_dispositivo", "raw": "o ventilador do escritório de Jaime está ligado", "expected": "o ventilador do escritório de Jaime está ligado"}
+{"category": "synthetic_eletrodomesticos_unchanged_no_eligible_token", "raw": "como está a lava e seca", "expected": "como está a lava e seca"}
+{"category": "clean_eletrodomesticos", "raw": "como está a lava e seca", "expected": "como está a lava e seca"}
+{"category": "synthetic_energia_substitute", "raw": "quanto a casa está consuuindo", "expected": "quanto a casa está consumindo"}
+{"category": "clean_energia", "raw": "quanto a casa está consumindo", "expected": "quanto a casa está consumindo"}
+{"category": "synthetic_grupos_delete", "raw": "quais tomadas esão ligadas no andar de cima", "expected": "quais tomadas estão ligadas no andar de cima"}
+{"category": "clean_grupos", "raw": "quais tomadas estão ligadas no andar de cima", "expected": "quais tomadas estão ligadas no andar de cima"}
+{"category": "synthetic_iluminacao_transpose", "raw": "desligue a luimnária da garagem", "expected": "desligue a luminária da garagem"}
+{"category": "clean_iluminacao", "raw": "desligue a luminária da garagem", "expected": "desligue a luminária da garagem"}
+{"category": "synthetic_impressao_3d_substitute", "raw": "velta a imprimir", "expected": "volta a imprimir"}
+{"category": "clean_impressao_3d", "raw": "volta a imprimir", "expected": "volta a imprimir"}
+{"category": "synthetic_informacao_unchanged_no_eligible_token", "raw": "qual a data de hoje", "expected": "qual a data de hoje"}
+{"category": "clean_informacao", "raw": "qual a data de hoje", "expected": "qual a data de hoje"}
+{"category": "synthetic_jardim_transpose", "raw": "segura o cortaodr", "expected": "segura o cortador"}
+{"category": "clean_jardim", "raw": "segura o cortador", "expected": "segura o cortador"}
+{"category": "synthetic_limpeza_substitute", "raw": "asiira o escritório de Bruna", "expected": "aspira o escritório de Bruna"}
+{"category": "clean_limpeza", "raw": "aspira o escritório de Bruna", "expected": "aspira o escritório de Bruna"}
+{"category": "synthetic_localizacao_delete", "raw": "toca meu clular", "expected": "toca meu celular"}
+{"category": "clean_localizacao", "raw": "toca meu celular", "expected": "toca meu celular"}
+{"category": "synthetic_midia_transpose", "raw": "vai um mintuo pra frente", "expected": "vai um minuto pra frente"}
+{"category": "clean_midia", "raw": "vai um minuto pra frente", "expected": "vai um minuto pra frente"}
+{"category": "synthetic_presenca_substitute", "raw": "vê se Bruna está no quarto de hóspades", "expected": "vê se Bruna está no quarto de hóspedes"}
+{"category": "clean_presenca", "raw": "vê se Bruna está no quarto de hóspedes", "expected": "vê se Bruna está no quarto de hóspedes"}
+{"category": "synthetic_rotinas_delete", "raw": "tem algo que eu peciso saber", "expected": "tem algo que eu preciso saber"}
+{"category": "clean_rotinas", "raw": "tem algo que eu preciso saber", "expected": "tem algo que eu preciso saber"}
+{"category": "synthetic_satelite_transpose", "raw": "toca podcast onde eu esotu", "expected": "toca podcast onde eu estou"}
+{"category": "clean_satelite", "raw": "toca podcast onde eu estou", "expected": "toca podcast onde eu estou"}
+{"category": "synthetic_seguranca_substitute", "raw": "qual o estado da fechadura da perta da frente", "expected": "qual o estado da fechadura da porta da frente"}
+{"category": "clean_seguranca", "raw": "qual o estado da fechadura da porta da frente", "expected": "qual o estado da fechadura da porta da frente"}
+{"category": "synthetic_tempo_delete", "raw": "aumenta o timer em cico minutos", "expected": "aumenta o timer em cinco minutos"}
+{"category": "clean_tempo", "raw": "aumenta o timer em cinco minutos", "expected": "aumenta o timer em cinco minutos"}
+{"category": "synthetic_agua_transpose", "raw": "tem água vaznado", "expected": "tem água vazando"}
+{"category": "clean_agua", "raw": "tem água vazando", "expected": "tem água vazando"}
+{"category": "synthetic_ambiente_substitute", "raw": "qual a umidide do quarto", "expected": "qual a umidade do quarto"}
+{"category": "clean_ambiente", "raw": "qual a umidade do quarto", "expected": "qual a umidade do quarto"}
+{"category": "synthetic_calendario_delete", "raw": "que horas é acdemia", "expected": "que horas é academia"}
+{"category": "clean_calendario", "raw": "que horas é academia", "expected": "que horas é academia"}
+{"category": "synthetic_cenas_transpose", "raw": "qureo a cena leitura", "expected": "quero a cena leitura"}
+{"category": "clean_cenas", "raw": "quero a cena leitura", "expected": "quero a cena leitura"}
+{"category": "synthetic_clima_externo_substitute", "raw": "qual a temparatura lá fora", "expected": "qual a temperatura lá fora"}
+{"category": "clean_clima_externo", "raw": "qual a temperatura lá fora", "expected": "qual a temperatura lá fora"}
+{"category": "synthetic_climatizacao_delete", "raw": "bota o arcondicionado da sala pra gelar", "expected": "bota o ar-condicionado da sala pra gelar"}
+{"category": "clean_climatizacao", "raw": "bota o ar-condicionado da sala pra gelar", "expected": "bota o ar-condicionado da sala pra gelar"}
+{"category": "synthetic_comunicacao_transpose", "raw": "faz uma ligaãço para pai", "expected": "faz uma ligação para pai"}
+{"category": "clean_comunicacao", "raw": "faz uma ligação para pai", "expected": "faz uma ligação para pai"}
+{"category": "synthetic_consulta_substitute", "raw": "onde fica a teluvisão", "expected": "onde fica a televisão"}
+{"category": "clean_consulta", "raw": "onde fica a televisão", "expected": "onde fica a televisão"}
+{"category": "synthetic_conversa_unchanged_no_eligible_token", "raw": "pode", "expected": "pode"}
+{"category": "clean_conversa", "raw": "pode", "expected": "pode"}
+{"category": "synthetic_cortinas_transpose", "raw": "abre a persiana da coiznha", "expected": "abre a persiana da cozinha"}
+{"category": "clean_cortinas", "raw": "abre a persiana da cozinha", "expected": "abre a persiana da cozinha"}
+{"category": "synthetic_dispositivo_substitute", "raw": "qual o estado da lâmpada da garugem", "expected": "qual o estado da lâmpada da garagem"}
+{"category": "clean_dispositivo", "raw": "qual o estado da lâmpada da garagem", "expected": "qual o estado da lâmpada da garagem"}
+{"category": "synthetic_eletrodomesticos_delete", "raw": "a cafeteira está lgada", "expected": "a cafeteira está ligada"}
+{"category": "clean_eletrodomesticos", "raw": "a cafeteira está ligada", "expected": "a cafeteira está ligada"}
+{"category": "synthetic_energia_transpose", "raw": "quanto de bateria tem o ar-condicoinado", "expected": "quanto de bateria tem o ar-condicionado"}
+{"category": "clean_energia", "raw": "quanto de bateria tem o ar-condicionado", "expected": "quanto de bateria tem o ar-condicionado"}
+{"category": "synthetic_grupos_substitute", "raw": "desliga tudo do aodar de baixo", "expected": "desliga tudo do andar de baixo"}
+{"category": "clean_grupos", "raw": "desliga tudo do andar de baixo", "expected": "desliga tudo do andar de baixo"}
+{"category": "synthetic_iluminacao_delete", "raw": "pode desigar a lâmpada da área de serviço", "expected": "pode desligar a lâmpada da área de serviço"}
+{"category": "clean_iluminacao", "raw": "pode desligar a lâmpada da área de serviço", "expected": "pode desligar a lâmpada da área de serviço"}
+{"category": "synthetic_impressao_3d_transpose", "raw": "contiuna a impressão", "expected": "continua a impressão"}
+{"category": "clean_impressao_3d", "raw": "continua a impressão", "expected": "continua a impressão"}
+{"category": "synthetic_informacao_substitute", "raw": "que haras são", "expected": "que horas são"}
+{"category": "clean_informacao", "raw": "que horas são", "expected": "que horas são"}
+{"category": "synthetic_jardim_delete", "raw": "pausa o cortadr", "expected": "pausa o cortador"}
+{"category": "clean_jardim", "raw": "pausa o cortador", "expected": "pausa o cortador"}
+{"category": "synthetic_limpeza_transpose", "raw": "manad o robô voltar", "expected": "manda o robô voltar"}
+{"category": "clean_limpeza", "raw": "manda o robô voltar", "expected": "manda o robô voltar"}
+{"category": "synthetic_localizacao_substitute", "raw": "onde tá meu calular", "expected": "onde tá meu celular"}
+{"category": "clean_localizacao", "raw": "onde tá meu celular", "expected": "onde tá meu celular"}
+{"category": "synthetic_midia_delete", "raw": "toca músics de Marisa Monte", "expected": "toca músicas de Marisa Monte"}
+{"category": "clean_midia", "raw": "toca músicas de Marisa Monte", "expected": "toca músicas de Marisa Monte"}
+{"category": "synthetic_presenca_transpose", "raw": "Jaime tá na vraanda", "expected": "Jaime tá na varanda"}
+{"category": "clean_presenca", "raw": "Jaime tá na varanda", "expected": "Jaime tá na varanda"}
+{"category": "synthetic_rotinas_substitute", "raw": "pode deiligar tudo", "expected": "pode desligar tudo"}
+{"category": "clean_rotinas", "raw": "pode desligar tudo", "expected": "pode desligar tudo"}
+{"category": "synthetic_satelite_delete", "raw": "desiga a luz daqui", "expected": "desliga a luz daqui"}
+{"category": "clean_satelite", "raw": "desliga a luz daqui", "expected": "desliga a luz daqui"}
+{"category": "synthetic_seguranca_transpose", "raw": "abre a fechdaura da garagem", "expected": "abre a fechadura da garagem"}
+{"category": "clean_seguranca", "raw": "abre a fechadura da garagem", "expected": "abre a fechadura da garagem"}
+{"category": "synthetic_tempo_substitute", "raw": "inicia um timer de tronta minutos", "expected": "inicia um timer de trinta minutos"}
+{"category": "clean_tempo", "raw": "inicia um timer de trinta minutos", "expected": "inicia um timer de trinta minutos"}
+{"category": "synthetic_agua_delete", "raw": "quanto tem na cixa d'água", "expected": "quanto tem na caixa d'água"}
+{"category": "clean_agua", "raw": "quanto tem na caixa d'água", "expected": "quanto tem na caixa d'água"}
+{"category": "synthetic_ambiente_transpose", "raw": "tá escuro na varnada", "expected": "tá escuro na varanda"}
+{"category": "clean_ambiente", "raw": "tá escuro na varanda", "expected": "tá escuro na varanda"}
+{"category": "synthetic_calendario_substitute", "raw": "qual o horirio de academia", "expected": "qual o horário de academia"}
+{"category": "clean_calendario", "raw": "qual o horário de academia", "expected": "qual o horário de academia"}
+{"category": "synthetic_cenas_delete", "raw": "aiva a cena relaxar", "expected": "ativa a cena relaxar"}
+{"category": "clean_cenas", "raw": "ativa a cena relaxar", "expected": "ativa a cena relaxar"}
+{"category": "synthetic_clima_externo_transpose", "raw": "como fica o clmia amanhã", "expected": "como fica o clima amanhã"}
+{"category": "clean_clima_externo", "raw": "como fica o clima amanhã", "expected": "como fica o clima amanhã"}
+{"category": "synthetic_climatizacao_substitute", "raw": "ajusta o umadificador da sala para 45%", "expected": "ajusta o umidificador da sala para 45%"}
+{"category": "clean_climatizacao", "raw": "ajusta o umidificador da sala para 45%", "expected": "ajusta o umidificador da sala para 45%"}
+{"category": "synthetic_comunicacao_delete", "raw": "faz um anúncio no escritório de Brua", "expected": "faz um anúncio no escritório de Bruna"}
+{"category": "clean_comunicacao", "raw": "faz um anúncio no escritório de Bruna", "expected": "faz um anúncio no escritório de Bruna"}
+{"category": "synthetic_consulta_transpose", "raw": "quais dispositivos tem no escirtório de Bruna", "expected": "quais dispositivos tem no escritório de Bruna"}
+{"category": "clean_consulta", "raw": "quais dispositivos tem no escritório de Bruna", "expected": "quais dispositivos tem no escritório de Bruna"}
+{"category": "synthetic_conversa_unchanged_no_eligible_token", "raw": "não pode", "expected": "não pode"}
+{"category": "clean_conversa", "raw": "não pode", "expected": "não pode"}
+{"category": "synthetic_cortinas_delete", "raw": "pode abrir a cortina do escrtório", "expected": "pode abrir a cortina do escritório"}
+{"category": "clean_cortinas", "raw": "pode abrir a cortina do escritório", "expected": "pode abrir a cortina do escritório"}
+{"category": "synthetic_dispositivo_transpose", "raw": "ativa a lâmpada da gargaem", "expected": "ativa a lâmpada da garagem"}
+{"category": "clean_dispositivo", "raw": "ativa a lâmpada da garagem", "expected": "ativa a lâmpada da garagem"}
+{"category": "synthetic_eletrodomesticos_substitute", "raw": "como está a lava-liuças", "expected": "como está a lava-louças"}
+{"category": "clean_eletrodomesticos", "raw": "como está a lava-louças", "expected": "como está a lava-louças"}
+{"category": "synthetic_energia_delete", "raw": "qual a bateria do abajr", "expected": "qual a bateria do abajur"}
+{"category": "clean_energia", "raw": "qual a bateria do abajur", "expected": "qual a bateria do abajur"}
+{"category": "synthetic_grupos_transpose", "raw": "liga tudo do área socail", "expected": "liga tudo do área social"}
+{"category": "clean_grupos", "raw": "liga tudo do área social", "expected": "liga tudo do área social"}
+{"category": "synthetic_iluminacao_substitute", "raw": "aumenta o abajur do baiheiro", "expected": "aumenta o abajur do banheiro"}
+{"category": "clean_iluminacao", "raw": "aumenta o abajur do banheiro", "expected": "aumenta o abajur do banheiro"}
+{"category": "synthetic_impressao_3d_delete", "raw": "pasa a impressora 3D", "expected": "pausa a impressora 3D"}
+{"category": "clean_impressao_3d", "raw": "pausa a impressora 3D", "expected": "pausa a impressora 3D"}
+{"category": "synthetic_informacao_unchanged_no_eligible_token", "raw": "qual a hora", "expected": "qual a hora"}
+{"category": "clean_informacao", "raw": "qual a hora", "expected": "qual a hora"}
+{"category": "synthetic_jardim_substitute", "raw": "manda o cortadir carregar", "expected": "manda o cortador carregar"}
+{"category": "clean_jardim", "raw": "manda o cortador carregar", "expected": "manda o cortador carregar"}
+{"category": "synthetic_limpeza_delete", "raw": "começa a lipeza", "expected": "começa a limpeza"}
+{"category": "clean_limpeza", "raw": "começa a limpeza", "expected": "começa a limpeza"}
+{"category": "synthetic_localizacao_transpose", "raw": "cadê meu ceullar", "expected": "cadê meu celular"}
+{"category": "clean_localizacao", "raw": "cadê meu celular", "expected": "cadê meu celular"}
+{"category": "synthetic_midia_substitute", "raw": "quoro ouvir minha playlist", "expected": "quero ouvir minha playlist"}
+{"category": "clean_midia", "raw": "quero ouvir minha playlist", "expected": "quero ouvir minha playlist"}
+{"category": "synthetic_presenca_delete", "raw": "quantas pesoas tem na sala", "expected": "quantas pessoas tem na sala"}
+{"category": "clean_presenca", "raw": "quantas pessoas tem na sala", "expected": "quantas pessoas tem na sala"}
+{"category": "synthetic_rotinas_transpose", "raw": "roda a roitna boa noite", "expected": "roda a rotina boa noite"}
+{"category": "clean_rotinas", "raw": "roda a rotina boa noite", "expected": "roda a rotina boa noite"}
+{"category": "synthetic_satelite_substitute", "raw": "aconde aqui", "expected": "acende aqui"}
+{"category": "clean_satelite", "raw": "acende aqui", "expected": "acende aqui"}
+{"category": "synthetic_seguranca_delete", "raw": "mosta a câmera da garagem", "expected": "mostra a câmera da garagem"}
+{"category": "clean_seguranca", "raw": "mostra a câmera da garagem", "expected": "mostra a câmera da garagem"}
+{"category": "synthetic_tempo_transpose", "raw": "coloca um alarme para seis da tadre", "expected": "coloca um alarme para seis da tarde"}
+{"category": "clean_tempo", "raw": "coloca um alarme para seis da tarde", "expected": "coloca um alarme para seis da tarde"}
+{"category": "synthetic_agua_substitute", "raw": "detectou vazameito", "expected": "detectou vazamento"}
+{"category": "clean_agua", "raw": "detectou vazamento", "expected": "detectou vazamento"}
+{"category": "synthetic_ambiente_delete", "raw": "quanto está a umidae do banheiro", "expected": "quanto está a umidade do banheiro"}
+{"category": "clean_ambiente", "raw": "quanto está a umidade do banheiro", "expected": "quanto está a umidade do banheiro"}
+{"category": "synthetic_calendario_transpose", "raw": "remvoe almoço da agenda", "expected": "remove almoço da agenda"}
+{"category": "clean_calendario", "raw": "remove almoço da agenda", "expected": "remove almoço da agenda"}
+{"category": "synthetic_cenas_substitute", "raw": "liga a cena leetura", "expected": "liga a cena leitura"}
+{"category": "clean_cenas", "raw": "liga a cena leitura", "expected": "liga a cena leitura"}
+{"category": "synthetic_clima_externo_delete", "raw": "como vai estr o tempo hoje", "expected": "como vai estar o tempo hoje"}
+{"category": "clean_clima_externo", "raw": "como vai estar o tempo hoje", "expected": "como vai estar o tempo hoje"}
+{"category": "synthetic_climatizacao_transpose", "raw": "bota o ar-condicionado da sala em 20 gruas", "expected": "bota o ar-condicionado da sala em 20 graus"}
+{"category": "clean_climatizacao", "raw": "bota o ar-condicionado da sala em 20 graus", "expected": "bota o ar-condicionado da sala em 20 graus"}
+{"category": "synthetic_comunicacao_substitute", "raw": "telifone para Bruna", "expected": "telefone para Bruna"}
+{"category": "clean_comunicacao", "raw": "telefone para Bruna", "expected": "telefone para Bruna"}
+{"category": "synthetic_consulta_delete", "raw": "onde está o abjur", "expected": "onde está o abajur"}
+{"category": "clean_consulta", "raw": "onde está o abajur", "expected": "onde está o abajur"}
+{"category": "synthetic_conversa_unchanged_no_eligible_token", "raw": "não", "expected": "não"}
+{"category": "clean_conversa", "raw": "não", "expected": "não"}
+{"category": "synthetic_cortinas_substitute", "raw": "sobe a persiana do quaeto", "expected": "sobe a persiana do quarto"}
+{"category": "clean_cortinas", "raw": "sobe a persiana do quarto", "expected": "sobe a persiana do quarto"}
+{"category": "synthetic_dispositivo_delete", "raw": "como está a lâmpada da gargem", "expected": "como está a lâmpada da garagem"}
+{"category": "clean_dispositivo", "raw": "como está a lâmpada da garagem", "expected": "como está a lâmpada da garagem"}
+{"category": "synthetic_eletrodomesticos_transpose", "raw": "o que o forno está faznedo", "expected": "o que o forno está fazendo"}
+{"category": "clean_eletrodomesticos", "raw": "o que o forno está fazendo", "expected": "o que o forno está fazendo"}
+{"category": "synthetic_energia_substitute", "raw": "pode deslegar a tomada da impressora", "expected": "pode desligar a tomada da impressora"}
+{"category": "clean_energia", "raw": "pode desligar a tomada da impressora", "expected": "pode desligar a tomada da impressora"}
+{"category": "synthetic_grupos_delete", "raw": "liga tudo do área ínima", "expected": "liga tudo do área íntima"}
+{"category": "clean_grupos", "raw": "liga tudo do área íntima", "expected": "liga tudo do área íntima"}
+{"category": "synthetic_iluminacao_transpose", "raw": "liga a luz do escritório de Jamie", "expected": "liga a luz do escritório de Jaime"}
+{"category": "clean_iluminacao", "raw": "liga a luz do escritório de Jaime", "expected": "liga a luz do escritório de Jaime"}
+{"category": "synthetic_impressao_3d_substitute", "raw": "a impressora está imprimineo", "expected": "a impressora está imprimindo"}
+{"category": "clean_impressao_3d", "raw": "a impressora está imprimindo", "expected": "a impressora está imprimindo"}
+{"category": "synthetic_informacao_unchanged_no_eligible_token", "raw": "hoje é que dia", "expected": "hoje é que dia"}
+{"category": "clean_informacao", "raw": "hoje é que dia", "expected": "hoje é que dia"}
+{"category": "synthetic_jardim_transpose", "raw": "para o cortadro de grama por enquanto", "expected": "para o cortador de grama por enquanto"}
+{"category": "clean_jardim", "raw": "para o cortador de grama por enquanto", "expected": "para o cortador de grama por enquanto"}
+{"category": "synthetic_limpeza_substitute", "raw": "inicia o robô aipirador", "expected": "inicia o robô aspirador"}
+{"category": "clean_limpeza", "raw": "inicia o robô aspirador", "expected": "inicia o robô aspirador"}
+{"category": "synthetic_localizacao_delete", "raw": "cadê meu teefone", "expected": "cadê meu telefone"}
+{"category": "clean_localizacao", "raw": "cadê meu telefone", "expected": "cadê meu telefone"}
+{"category": "synthetic_midia_transpose", "raw": "adianta dez sgeundos", "expected": "adianta dez segundos"}
+{"category": "clean_midia", "raw": "adianta dez segundos", "expected": "adianta dez segundos"}
+{"category": "synthetic_presenca_substitute", "raw": "tem geete no escritório de Jaime", "expected": "tem gente no escritório de Jaime"}
+{"category": "clean_presenca", "raw": "tem gente no escritório de Jaime", "expected": "tem gente no escritório de Jaime"}
+{"category": "synthetic_rotinas_delete", "raw": "executa modo trabalo", "expected": "executa modo trabalho"}
+{"category": "clean_rotinas", "raw": "executa modo trabalho", "expected": "executa modo trabalho"}
+{"category": "synthetic_satelite_transpose", "raw": "aumenta o vloume aqui", "expected": "aumenta o volume aqui"}
+{"category": "clean_satelite", "raw": "aumenta o volume aqui", "expected": "aumenta o volume aqui"}
+{"category": "synthetic_seguranca_substitute", "raw": "abre o portão da garaaem", "expected": "abre o portão da garagem"}
+{"category": "clean_seguranca", "raw": "abre o portão da garagem", "expected": "abre o portão da garagem"}
+{"category": "synthetic_tempo_delete", "raw": "qual é meu próximo alrme", "expected": "qual é meu próximo alarme"}
+{"category": "clean_tempo", "raw": "qual é meu próximo alarme", "expected": "qual é meu próximo alarme"}
+{"category": "synthetic_agua_transpose", "raw": "tem algmu vazamento", "expected": "tem algum vazamento"}
+{"category": "clean_agua", "raw": "tem algum vazamento", "expected": "tem algum vazamento"}
+{"category": "synthetic_ambiente_substitute", "raw": "qual a luminosidade do escritório de Jiime", "expected": "qual a luminosidade do escritório de Jaime"}
+{"category": "clean_ambiente", "raw": "qual a luminosidade do escritório de Jaime", "expected": "qual a luminosidade do escritório de Jaime"}
+{"category": "synthetic_calendario_delete", "raw": "a que horas comea compromisso", "expected": "a que horas começa compromisso"}
+{"category": "clean_calendario", "raw": "a que horas começa compromisso", "expected": "a que horas começa compromisso"}
+{"category": "synthetic_cenas_transpose", "raw": "modo leiutra", "expected": "modo leitura"}
+{"category": "clean_cenas", "raw": "modo leitura", "expected": "modo leitura"}
+{"category": "synthetic_clima_externo_substitute", "raw": "que horas o sol nasae", "expected": "que horas o sol nasce"}
+{"category": "clean_clima_externo", "raw": "que horas o sol nasce", "expected": "que horas o sol nasce"}
+{"category": "synthetic_climatizacao_delete", "raw": "deixa o ar-condicionado do quato em 22 graus", "expected": "deixa o ar-condicionado do quarto em 22 graus"}
+{"category": "clean_climatizacao", "raw": "deixa o ar-condicionado do quarto em 22 graus", "expected": "deixa o ar-condicionado do quarto em 22 graus"}
+{"category": "synthetic_comunicacao_transpose", "raw": "tleefone para mãe", "expected": "telefone para mãe"}
+{"category": "clean_comunicacao", "raw": "telefone para mãe", "expected": "telefone para mãe"}
+{"category": "synthetic_consulta_substitute", "raw": "quais dispositives tem na cozinha", "expected": "quais dispositivos tem na cozinha"}
+{"category": "clean_consulta", "raw": "quais dispositivos tem na cozinha", "expected": "quais dispositivos tem na cozinha"}
+{"category": "synthetic_conversa_delete", "raw": "esuece", "expected": "esquece"}
+{"category": "clean_conversa", "raw": "esquece", "expected": "esquece"}
+{"category": "synthetic_cortinas_transpose", "raw": "qual a posiçoã da persiana do quarto", "expected": "qual a posição da persiana do quarto"}
+{"category": "clean_cortinas", "raw": "qual a posição da persiana do quarto", "expected": "qual a posição da persiana do quarto"}
+{"category": "synthetic_dispositivo_substitute", "raw": "ativa o abajur da varenda", "expected": "ativa o abajur da varanda"}
+{"category": "clean_dispositivo", "raw": "ativa o abajur da varanda", "expected": "ativa o abajur da varanda"}
+{"category": "synthetic_eletrodomesticos_delete", "raw": "quanto tempo falta na lvagem", "expected": "quanto tempo falta na lavagem"}
+{"category": "clean_eletrodomesticos", "raw": "quanto tempo falta na lavagem", "expected": "quanto tempo falta na lavagem"}
+{"category": "synthetic_energia_transpose", "raw": "desative a tomaad da impressora", "expected": "desative a tomada da impressora"}
+{"category": "clean_energia", "raw": "desative a tomada da impressora", "expected": "desative a tomada da impressora"}
+{"category": "synthetic_grupos_substitute", "raw": "quaos aparelhos estão ligadas no área íntima", "expected": "quais aparelhos estão ligadas no área íntima"}
+{"category": "clean_grupos", "raw": "quais aparelhos estão ligadas no área íntima", "expected": "quais aparelhos estão ligadas no área íntima"}
+{"category": "synthetic_iluminacao_delete", "raw": "liga o abjur do banheiro", "expected": "liga o abajur do banheiro"}
+{"category": "clean_iluminacao", "raw": "liga o abajur do banheiro", "expected": "liga o abajur do banheiro"}
+{"category": "synthetic_impressao_3d_transpose", "raw": "como está a impresãso", "expected": "como está a impressão"}
+{"category": "clean_impressao_3d", "raw": "como está a impressão", "expected": "como está a impressão"}
+{"category": "synthetic_informacao_unchanged_no_eligible_token", "raw": "me diz a data", "expected": "me diz a data"}
+{"category": "clean_informacao", "raw": "me diz a data", "expected": "me diz a data"}
+{"category": "synthetic_jardim_delete", "raw": "faz o robô cortador voltr", "expected": "faz o robô cortador voltar"}
+{"category": "clean_jardim", "raw": "faz o robô cortador voltar", "expected": "faz o robô cortador voltar"}
+{"category": "synthetic_limpeza_transpose", "raw": "volta o apsirador robô pra base", "expected": "volta o aspirador robô pra base"}
+{"category": "clean_limpeza", "raw": "volta o aspirador robô pra base", "expected": "volta o aspirador robô pra base"}
+{"category": "synthetic_localizacao_substitute", "raw": "acha meu culular", "expected": "acha meu celular"}
+{"category": "clean_localizacao", "raw": "acha meu celular", "expected": "acha meu celular"}
+{"category": "synthetic_midia_delete", "raw": "quero ouvr MPB", "expected": "quero ouvir MPB"}
+{"category": "clean_midia", "raw": "quero ouvir MPB", "expected": "quero ouvir MPB"}
+{"category": "synthetic_presenca_transpose", "raw": "o banherio está vazio", "expected": "o banheiro está vazio"}
+{"category": "clean_presenca", "raw": "o banheiro está vazio", "expected": "o banheiro está vazio"}
+{"category": "synthetic_rotinas_substitute", "raw": "desiiga a casa toda", "expected": "desliga a casa toda"}
+{"category": "clean_rotinas", "raw": "desliga a casa toda", "expected": "desliga a casa toda"}
+{"category": "synthetic_satelite_delete", "raw": "vlta seu som", "expected": "volta seu som"}
+{"category": "clean_satelite", "raw": "volta seu som", "expected": "volta seu som"}
+{"category": "synthetic_seguranca_transpose", "raw": "o portão da gargaem está aberto", "expected": "o portão da garagem está aberto"}
+{"category": "clean_seguranca", "raw": "o portão da garagem está aberto", "expected": "o portão da garagem está aberto"}
+{"category": "synthetic_tempo_substitute", "raw": "para todos os tamers", "expected": "para todos os timers"}
+{"category": "clean_tempo", "raw": "para todos os timers", "expected": "para todos os timers"}
+{"category": "synthetic_ambiente_delete", "raw": "qual o nível de ruído do escritório de Buna", "expected": "qual o nível de ruído do escritório de Bruna"}
+{"category": "clean_ambiente", "raw": "qual o nível de ruído do escritório de Bruna", "expected": "qual o nível de ruído do escritório de Bruna"}
+{"category": "synthetic_calendario_transpose", "raw": "que horas é consutla", "expected": "que horas é consulta"}
+{"category": "clean_calendario", "raw": "que horas é consulta", "expected": "que horas é consulta"}
+{"category": "synthetic_cenas_substitute", "raw": "quero a cena cinoma", "expected": "quero a cena cinema"}
+{"category": "clean_cenas", "raw": "quero a cena cinema", "expected": "quero a cena cinema"}
+{"category": "synthetic_clima_externo_delete", "raw": "que hors amanhece", "expected": "que horas amanhece"}
+{"category": "clean_clima_externo", "raw": "que horas amanhece", "expected": "que horas amanhece"}
+{"category": "synthetic_climatizacao_transpose", "raw": "coloca o ar-condicoinado do quarto no modo seco", "expected": "coloca o ar-condicionado do quarto no modo seco"}
+{"category": "clean_climatizacao", "raw": "coloca o ar-condicionado do quarto no modo seco", "expected": "coloca o ar-condicionado do quarto no modo seco"}
+{"category": "synthetic_comunicacao_substitute", "raw": "faz um anúnceo na cozinha", "expected": "faz um anúncio na cozinha"}
+{"category": "clean_comunicacao", "raw": "faz um anúncio na cozinha", "expected": "faz um anúncio na cozinha"}
+{"category": "synthetic_consulta_delete", "raw": "onde está a teleisão", "expected": "onde está a televisão"}
+{"category": "clean_consulta", "raw": "onde está a televisão", "expected": "onde está a televisão"}
+{"category": "synthetic_cortinas_transpose", "raw": "baixa a cortina do escriótrio", "expected": "baixa a cortina do escritório"}
+{"category": "clean_cortinas", "raw": "baixa a cortina do escritório", "expected": "baixa a cortina do escritório"}
+{"category": "synthetic_dispositivo_substitute", "raw": "quero a lâmiada da garagem desligado", "expected": "quero a lâmpada da garagem desligado"}
+{"category": "clean_dispositivo", "raw": "quero a lâmpada da garagem desligado", "expected": "quero a lâmpada da garagem desligado"}
+{"category": "synthetic_eletrodomesticos_delete", "raw": "a lava-loças está ligada", "expected": "a lava-louças está ligada"}
+{"category": "clean_eletrodomesticos", "raw": "a lava-louças está ligada", "expected": "a lava-louças está ligada"}
+{"category": "synthetic_energia_transpose", "raw": "a tomada está com qaunta bateria", "expected": "a tomada está com quanta bateria"}
+{"category": "clean_energia", "raw": "a tomada está com quanta bateria", "expected": "a tomada está com quanta bateria"}
+{"category": "synthetic_grupos_substitute", "raw": "apaia as dispositivos do casa toda", "expected": "apaga as dispositivos do casa toda"}
+{"category": "clean_grupos", "raw": "apaga as dispositivos do casa toda", "expected": "apaga as dispositivos do casa toda"}
+{"category": "synthetic_iluminacao_delete", "raw": "troca a cor da lâmpada da área de seriço para roxo", "expected": "troca a cor da lâmpada da área de serviço para roxo"}
+{"category": "clean_iluminacao", "raw": "troca a cor da lâmpada da área de serviço para roxo", "expected": "troca a cor da lâmpada da área de serviço para roxo"}
+{"category": "synthetic_impressao_3d_transpose", "raw": "qual o progersso da impressão", "expected": "qual o progresso da impressão"}
+{"category": "clean_impressao_3d", "raw": "qual o progresso da impressão", "expected": "qual o progresso da impressão"}
+{"category": "synthetic_jardim_substitute", "raw": "manda o cortador de grama trabolhar", "expected": "manda o cortador de grama trabalhar"}
+{"category": "clean_jardim", "raw": "manda o cortador de grama trabalhar", "expected": "manda o cortador de grama trabalhar"}
+{"category": "synthetic_limpeza_delete", "raw": "para o asprador robô", "expected": "para o aspirador robô"}
+{"category": "clean_limpeza", "raw": "para o aspirador robô", "expected": "para o aspirador robô"}
+{"category": "synthetic_localizacao_transpose", "raw": "acha meu teelfone", "expected": "acha meu telefone"}
+{"category": "clean_localizacao", "raw": "acha meu telefone", "expected": "acha meu telefone"}
+{"category": "synthetic_midia_substitute", "raw": "reprodoz podcast na casa inteira", "expected": "reproduz podcast na casa inteira"}
+{"category": "clean_midia", "raw": "reproduz podcast na casa inteira", "expected": "reproduz podcast na casa inteira"}
+{"category": "synthetic_presenca_delete", "raw": "confee se tem alguém na sala", "expected": "confere se tem alguém na sala"}
+{"category": "clean_presenca", "raw": "confere se tem alguém na sala", "expected": "confere se tem alguém na sala"}
+{"category": "synthetic_rotinas_unchanged_no_eligible_token", "raw": "modo bom dia", "expected": "modo bom dia"}
+{"category": "clean_rotinas", "raw": "modo bom dia", "expected": "modo bom dia"}
+{"category": "synthetic_satelite_substitute", "raw": "toca rádio onde eu esaou", "expected": "toca rádio onde eu estou"}
+{"category": "clean_satelite", "raw": "toca rádio onde eu estou", "expected": "toca rádio onde eu estou"}
+{"category": "synthetic_seguranca_delete", "raw": "a janela da sala está aerta", "expected": "a janela da sala está aberta"}
+{"category": "clean_seguranca", "raw": "a janela da sala está aberta", "expected": "a janela da sala está aberta"}
+{"category": "synthetic_tempo_transpose", "raw": "colcoa um timer de 15 minutos", "expected": "coloca um timer de 15 minutos"}
+{"category": "clean_tempo", "raw": "coloca um timer de 15 minutos", "expected": "coloca um timer de 15 minutos"}
+{"category": "synthetic_ambiente_substitute", "raw": "tá cluro no banheiro", "expected": "tá claro no banheiro"}
+{"category": "clean_ambiente", "raw": "tá claro no banheiro", "expected": "tá claro no banheiro"}
+{"category": "synthetic_calendario_delete", "raw": "qais compromissos eu tenho segunda-feira", "expected": "quais compromissos eu tenho segunda-feira"}
+{"category": "clean_calendario", "raw": "quais compromissos eu tenho segunda-feira", "expected": "quais compromissos eu tenho segunda-feira"}
+{"category": "synthetic_cenas_transpose", "raw": "coloca o modo relaaxr", "expected": "coloca o modo relaxar"}
+{"category": "clean_cenas", "raw": "coloca o modo relaxar", "expected": "coloca o modo relaxar"}
+{"category": "synthetic_clima_externo_substitute", "raw": "que hoeas o sol se põe", "expected": "que horas o sol se põe"}
+{"category": "clean_clima_externo", "raw": "que horas o sol se põe", "expected": "que horas o sol se põe"}
+{"category": "synthetic_climatizacao_delete", "raw": "dixa o ventilador de teto mais forte", "expected": "deixa o ventilador de teto mais forte"}
+{"category": "clean_climatizacao", "raw": "deixa o ventilador de teto mais forte", "expected": "deixa o ventilador de teto mais forte"}
+{"category": "synthetic_comunicacao_transpose", "raw": "liga para Bruan", "expected": "liga para Bruna"}
+{"category": "clean_comunicacao", "raw": "liga para Bruna", "expected": "liga para Bruna"}
+{"category": "synthetic_consulta_substitute", "raw": "quais aparelhos tem no escretório de Jaime", "expected": "quais aparelhos tem no escritório de Jaime"}
+{"category": "clean_consulta", "raw": "quais aparelhos tem no escritório de Jaime", "expected": "quais aparelhos tem no escritório de Jaime"}
+{"category": "synthetic_cortinas_delete", "raw": "desce a cortina do escitório", "expected": "desce a cortina do escritório"}
+{"category": "clean_cortinas", "raw": "desce a cortina do escritório", "expected": "desce a cortina do escritório"}
+{"category": "synthetic_dispositivo_transpose", "raw": "desativa a tmoada do corredor", "expected": "desativa a tomada do corredor"}
+{"category": "clean_dispositivo", "raw": "desativa a tomada do corredor", "expected": "desativa a tomada do corredor"}
+{"category": "synthetic_eletrodomesticos_substitute", "raw": "a air fryer está logada", "expected": "a air fryer está ligada"}
+{"category": "clean_eletrodomesticos", "raw": "a air fryer está ligada", "expected": "a air fryer está ligada"}
+{"category": "synthetic_energia_delete", "raw": "bateria da tmada", "expected": "bateria da tomada"}
+{"category": "clean_energia", "raw": "bateria da tomada", "expected": "bateria da tomada"}
+{"category": "synthetic_grupos_transpose", "raw": "liga tudo do andra de baixo", "expected": "liga tudo do andar de baixo"}
+{"category": "clean_grupos", "raw": "liga tudo do andar de baixo", "expected": "liga tudo do andar de baixo"}
+{"category": "synthetic_iluminacao_substitute", "raw": "deixa a fita LED do quintal aiagada", "expected": "deixa a fita LED do quintal apagada"}
+{"category": "clean_iluminacao", "raw": "deixa a fita LED do quintal apagada", "expected": "deixa a fita LED do quintal apagada"}
+{"category": "synthetic_impressao_3d_delete", "raw": "quanto falta pra impressão termnar", "expected": "quanto falta pra impressão terminar"}
+{"category": "clean_impressao_3d", "raw": "quanto falta pra impressão terminar", "expected": "quanto falta pra impressão terminar"}
+{"category": "synthetic_jardim_transpose", "raw": "inicai o cortador", "expected": "inicia o cortador"}
+{"category": "clean_jardim", "raw": "inicia o cortador", "expected": "inicia o cortador"}
+{"category": "synthetic_limpeza_substitute", "raw": "manea o robô pra escritório de Bruna", "expected": "manda o robô pra escritório de Bruna"}
+{"category": "clean_limpeza", "raw": "manda o robô pra escritório de Bruna", "expected": "manda o robô pra escritório de Bruna"}
+{"category": "synthetic_localizacao_delete", "raw": "faz meu telefone tcar", "expected": "faz meu telefone tocar"}
+{"category": "clean_localizacao", "raw": "faz meu telefone tocar", "expected": "faz meu telefone tocar"}
+{"category": "synthetic_midia_unchanged_no_eligible_token", "raw": "bota MPB", "expected": "bota MPB"}
+{"category": "clean_midia", "raw": "bota MPB", "expected": "bota MPB"}
+{"category": "synthetic_presenca_substitute", "raw": "tem alguém na cozinea", "expected": "tem alguém na cozinha"}
+{"category": "clean_presenca", "raw": "tem alguém na cozinha", "expected": "tem alguém na cozinha"}
+{"category": "synthetic_rotinas_delete", "raw": "tem alguma coisa erraa", "expected": "tem alguma coisa errada"}
+{"category": "clean_rotinas", "raw": "tem alguma coisa errada", "expected": "tem alguma coisa errada"}
+{"category": "synthetic_satelite_transpose", "raw": "voulme daqui em 10%", "expected": "volume daqui em 10%"}
+{"category": "clean_satelite", "raw": "volume daqui em 10%", "expected": "volume daqui em 10%"}
+{"category": "synthetic_seguranca_substitute", "raw": "arma o alurme", "expected": "arma o alarme"}
+{"category": "clean_seguranca", "raw": "arma o alarme", "expected": "arma o alarme"}
+{"category": "synthetic_tempo_delete", "raw": "marca uma hora no tmer", "expected": "marca uma hora no timer"}
+{"category": "clean_tempo", "raw": "marca uma hora no timer", "expected": "marca uma hora no timer"}
+{"category": "synthetic_ambiente_transpose", "raw": "qaunto está a temperatura no quarto", "expected": "quanto está a temperatura no quarto"}
+{"category": "clean_ambiente", "raw": "quanto está a temperatura no quarto", "expected": "quanto está a temperatura no quarto"}
+{"category": "synthetic_calendario_substitute", "raw": "coloca dentista na aienda segunda-feira às dez horas", "expected": "coloca dentista na agenda segunda-feira às dez horas"}
+{"category": "clean_calendario", "raw": "coloca dentista na agenda segunda-feira às dez horas", "expected": "coloca dentista na agenda segunda-feira às dez horas"}
+{"category": "synthetic_cenas_delete", "raw": "queo a cena jantar", "expected": "quero a cena jantar"}
+{"category": "clean_cenas", "raw": "quero a cena jantar", "expected": "quero a cena jantar"}
+{"category": "synthetic_clima_externo_transpose", "raw": "como fica o clmia domingo", "expected": "como fica o clima domingo"}
+{"category": "clean_clima_externo", "raw": "como fica o clima domingo", "expected": "como fica o clima domingo"}
+{"category": "synthetic_climatizacao_substitute", "raw": "o ar-condicionado do escritario está ligado", "expected": "o ar-condicionado do escritório está ligado"}
+{"category": "clean_climatizacao", "raw": "o ar-condicionado do escritório está ligado", "expected": "o ar-condicionado do escritório está ligado"}
+{"category": "synthetic_comunicacao_delete", "raw": "telefoe para pai", "expected": "telefone para pai"}
+{"category": "clean_comunicacao", "raw": "telefone para pai", "expected": "telefone para pai"}
+{"category": "synthetic_consulta_transpose", "raw": "cadê a cafetiera", "expected": "cadê a cafeteira"}
+{"category": "clean_consulta", "raw": "cadê a cafeteira", "expected": "cadê a cafeteira"}
+{"category": "synthetic_cortinas_substitute", "raw": "deixa a persaana do quarto em 75%", "expected": "deixa a persiana do quarto em 75%"}
+{"category": "clean_cortinas", "raw": "deixa a persiana do quarto em 75%", "expected": "deixa a persiana do quarto em 75%"}
+{"category": "synthetic_dispositivo_delete", "raw": "como está a cafeteira da área de servço", "expected": "como está a cafeteira da área de serviço"}
+{"category": "clean_dispositivo", "raw": "como está a cafeteira da área de serviço", "expected": "como está a cafeteira da área de serviço"}
+{"category": "synthetic_eletrodomesticos_transpose", "raw": "como está a máquina de lavra", "expected": "como está a máquina de lavar"}
+{"category": "clean_eletrodomesticos", "raw": "como está a máquina de lavar", "expected": "como está a máquina de lavar"}
+{"category": "synthetic_energia_substitute", "raw": "pode deslegar a tomada da TV", "expected": "pode desligar a tomada da TV"}
+{"category": "clean_energia", "raw": "pode desligar a tomada da TV", "expected": "pode desligar a tomada da TV"}
+{"category": "synthetic_grupos_delete", "raw": "liga as disposiivos do casa toda", "expected": "liga as dispositivos do casa toda"}
+{"category": "clean_grupos", "raw": "liga as dispositivos do casa toda", "expected": "liga as dispositivos do casa toda"}
+{"category": "synthetic_iluminacao_transpose", "raw": "acende todas as lzues do escritório de Bruna", "expected": "acende todas as luzes do escritório de Bruna"}
+{"category": "clean_iluminacao", "raw": "acende todas as luzes do escritório de Bruna", "expected": "acende todas as luzes do escritório de Bruna"}
+{"category": "synthetic_impressao_3d_substitute", "raw": "pausa a impresaão", "expected": "pausa a impressão"}
+{"category": "clean_impressao_3d", "raw": "pausa a impressão", "expected": "pausa a impressão"}
+{"category": "synthetic_jardim_delete", "raw": "liga o cortdor", "expected": "liga o cortador"}
+{"category": "clean_jardim", "raw": "liga o cortador", "expected": "liga o cortador"}
+{"category": "synthetic_limpeza_transpose", "raw": "madna o robô aspirador pra base", "expected": "manda o robô aspirador pra base"}
+{"category": "clean_limpeza", "raw": "manda o robô aspirador pra base", "expected": "manda o robô aspirador pra base"}
+{"category": "synthetic_midia_substitute", "raw": "manda isso para a quurto", "expected": "manda isso para a quarto"}
+{"category": "clean_midia", "raw": "manda isso para a quarto", "expected": "manda isso para a quarto"}
+{"category": "synthetic_presenca_delete", "raw": "vê se Jaie está na área de serviço", "expected": "vê se Jaime está na área de serviço"}
+{"category": "clean_presenca", "raw": "vê se Jaime está na área de serviço", "expected": "vê se Jaime está na área de serviço"}
+{"category": "synthetic_rotinas_unchanged_no_eligible_token", "raw": "bom dia", "expected": "bom dia"}
+{"category": "clean_rotinas", "raw": "bom dia", "expected": "bom dia"}
+{"category": "synthetic_satelite_substitute", "raw": "reproduz rock nease alto-falante", "expected": "reproduz rock nesse alto-falante"}
+{"category": "clean_satelite", "raw": "reproduz rock nesse alto-falante", "expected": "reproduz rock nesse alto-falante"}
+{"category": "synthetic_seguranca_delete", "raw": "confere o portão da gaagem", "expected": "confere o portão da garagem"}
+{"category": "clean_seguranca", "raw": "confere o portão da garagem", "expected": "confere o portão da garagem"}
+{"category": "synthetic_tempo_transpose", "raw": "me dá mais um mniuto", "expected": "me dá mais um minuto"}
+{"category": "clean_tempo", "raw": "me dá mais um minuto", "expected": "me dá mais um minuto"}
+{"category": "synthetic_ambiente_substitute", "raw": "me diz a temperatura da área de serviao", "expected": "me diz a temperatura da área de serviço"}
+{"category": "clean_ambiente", "raw": "me diz a temperatura da área de serviço", "expected": "me diz a temperatura da área de serviço"}
+{"category": "synthetic_calendario_delete", "raw": "marca acadeia hoje às meio-dia", "expected": "marca academia hoje às meio-dia"}
+{"category": "clean_calendario", "raw": "marca academia hoje às meio-dia", "expected": "marca academia hoje às meio-dia"}
+{"category": "synthetic_cenas_transpose", "raw": "coolca o modo trabalho", "expected": "coloca o modo trabalho"}
+{"category": "clean_cenas", "raw": "coloca o modo trabalho", "expected": "coloca o modo trabalho"}
+{"category": "synthetic_clima_externo_substitute", "raw": "como vai estar o temio domingo", "expected": "como vai estar o tempo domingo"}
+{"category": "clean_clima_externo", "raw": "como vai estar o tempo domingo", "expected": "como vai estar o tempo domingo"}
+{"category": "synthetic_climatizacao_delete", "raw": "aiva o ar-condicionado da sala", "expected": "ativa o ar-condicionado da sala"}
+{"category": "clean_climatizacao", "raw": "ativa o ar-condicionado da sala", "expected": "ativa o ar-condicionado da sala"}
+{"category": "synthetic_comunicacao_transpose", "raw": "aivsa na sala que eu estou chamando", "expected": "avisa na sala que eu estou chamando"}
+{"category": "clean_comunicacao", "raw": "avisa na sala que eu estou chamando", "expected": "avisa na sala que eu estou chamando"}
+{"category": "synthetic_consulta_substitute", "raw": "em que cômooo está o ar-condicionado", "expected": "em que cômodo está o ar-condicionado"}
+{"category": "clean_consulta", "raw": "em que cômodo está o ar-condicionado", "expected": "em que cômodo está o ar-condicionado"}
+{"category": "synthetic_cortinas_delete", "raw": "levnta a cortina do escritório", "expected": "levanta a cortina do escritório"}
+{"category": "clean_cortinas", "raw": "levanta a cortina do escritório", "expected": "levanta a cortina do escritório"}
+{"category": "synthetic_dispositivo_transpose", "raw": "quero a lâmpada da garagem liagdo", "expected": "quero a lâmpada da garagem ligado"}
+{"category": "clean_dispositivo", "raw": "quero a lâmpada da garagem ligado", "expected": "quero a lâmpada da garagem ligado"}
+{"category": "synthetic_eletrodomesticos_substitute", "raw": "a lava e seca está liiada", "expected": "a lava e seca está ligada"}
+{"category": "clean_eletrodomesticos", "raw": "a lava e seca está ligada", "expected": "a lava e seca está ligada"}
+{"category": "synthetic_energia_delete", "raw": "qunto de bateria tem o ventilador", "expected": "quanto de bateria tem o ventilador"}
+{"category": "clean_energia", "raw": "quanto de bateria tem o ventilador", "expected": "quanto de bateria tem o ventilador"}
+{"category": "synthetic_grupos_transpose", "raw": "tem alguma coisa ligada no área soical", "expected": "tem alguma coisa ligada no área social"}
+{"category": "clean_grupos", "raw": "tem alguma coisa ligada no área social", "expected": "tem alguma coisa ligada no área social"}
+{"category": "synthetic_iluminacao_substitute", "raw": "acende a fita LED da vaianda", "expected": "acende a fita LED da varanda"}
+{"category": "clean_iluminacao", "raw": "acende a fita LED da varanda", "expected": "acende a fita LED da varanda"}
+{"category": "synthetic_jardim_delete", "raw": "liga o robô cortaor", "expected": "liga o robô cortador"}
+{"category": "clean_jardim", "raw": "liga o robô cortador", "expected": "liga o robô cortador"}
+{"category": "synthetic_limpeza_transpose", "raw": "aspria o banheiro", "expected": "aspira o banheiro"}
+{"category": "clean_limpeza", "raw": "aspira o banheiro", "expected": "aspira o banheiro"}
+{"category": "synthetic_midia_substitute", "raw": "põe rádio pra tocur", "expected": "põe rádio pra tocar"}
+{"category": "clean_midia", "raw": "põe rádio pra tocar", "expected": "põe rádio pra tocar"}
+{"category": "synthetic_presenca_delete", "raw": "tem alguém em cozina", "expected": "tem alguém em cozinha"}
+{"category": "clean_presenca", "raw": "tem alguém em cozinha", "expected": "tem alguém em cozinha"}
+{"category": "synthetic_rotinas_transpose", "raw": "delsiga tudo", "expected": "desliga tudo"}
+{"category": "clean_rotinas", "raw": "desliga tudo", "expected": "desliga tudo"}
+{"category": "synthetic_satelite_substitute", "raw": "volume daqoi em 75%", "expected": "volume daqui em 75%"}
+{"category": "clean_satelite", "raw": "volume daqui em 75%", "expected": "volume daqui em 75%"}
+{"category": "synthetic_seguranca_delete", "raw": "a janla da cozinha está aberta", "expected": "a janela da cozinha está aberta"}
+{"category": "clean_seguranca", "raw": "a janela da cozinha está aberta", "expected": "a janela da cozinha está aberta"}
+{"category": "synthetic_tempo_transpose", "raw": "quatno falta no timer", "expected": "quanto falta no timer"}
+{"category": "clean_tempo", "raw": "quanto falta no timer", "expected": "quanto falta no timer"}
+{"category": "synthetic_ambiente_substitute", "raw": "qual a temperatura do quario", "expected": "qual a temperatura do quarto"}
+{"category": "clean_ambiente", "raw": "qual a temperatura do quarto", "expected": "qual a temperatura do quarto"}
+{"category": "synthetic_calendario_delete", "raw": "quando é acadmia", "expected": "quando é academia"}
+{"category": "clean_calendario", "raw": "quando é academia", "expected": "quando é academia"}
+{"category": "synthetic_cenas_transpose", "raw": "liga a cena janatr", "expected": "liga a cena jantar"}
+{"category": "clean_cenas", "raw": "liga a cena jantar", "expected": "liga a cena jantar"}
+{"category": "synthetic_clima_externo_substitute", "raw": "como fica o clima sáaado", "expected": "como fica o clima sábado"}
+{"category": "clean_clima_externo", "raw": "como fica o clima sábado", "expected": "como fica o clima sábado"}
+{"category": "synthetic_climatizacao_delete", "raw": "destiva o desumidificador do quarto", "expected": "desativa o desumidificador do quarto"}
+{"category": "clean_climatizacao", "raw": "desativa o desumidificador do quarto", "expected": "desativa o desumidificador do quarto"}
+{"category": "synthetic_comunicacao_transpose", "raw": "fala no banheiro que eu cheguie", "expected": "fala no banheiro que eu cheguei"}
+{"category": "clean_comunicacao", "raw": "fala no banheiro que eu cheguei", "expected": "fala no banheiro que eu cheguei"}
+{"category": "synthetic_consulta_substitute", "raw": "onde fica o abauur", "expected": "onde fica o abajur"}
+{"category": "clean_consulta", "raw": "onde fica o abajur", "expected": "onde fica o abajur"}
+{"category": "synthetic_cortinas_delete", "raw": "baixa a persiana do qurto", "expected": "baixa a persiana do quarto"}
+{"category": "clean_cortinas", "raw": "baixa a persiana do quarto", "expected": "baixa a persiana do quarto"}
+{"category": "synthetic_dispositivo_transpose", "raw": "ligue a lâmapda da garagem", "expected": "ligue a lâmpada da garagem"}
+{"category": "clean_dispositivo", "raw": "ligue a lâmpada da garagem", "expected": "ligue a lâmpada da garagem"}
+{"category": "synthetic_eletrodomesticos_substitute", "raw": "o que a impressora 3D está fazondo", "expected": "o que a impressora 3D está fazendo"}
+{"category": "clean_eletrodomesticos", "raw": "o que a impressora 3D está fazendo", "expected": "o que a impressora 3D está fazendo"}
+{"category": "synthetic_energia_delete", "raw": "bateia do abajur", "expected": "bateria do abajur"}
+{"category": "clean_energia", "raw": "bateria do abajur", "expected": "bateria do abajur"}
+{"category": "synthetic_grupos_transpose", "raw": "como estão as aparelhos do área scoial", "expected": "como estão as aparelhos do área social"}
+{"category": "clean_grupos", "raw": "como estão as aparelhos do área social", "expected": "como estão as aparelhos do área social"}
+{"category": "synthetic_iluminacao_substitute", "raw": "desliga a lâipada do escritório de Bruna", "expected": "desliga a lâmpada do escritório de Bruna"}
+{"category": "clean_iluminacao", "raw": "desliga a lâmpada do escritório de Bruna", "expected": "desliga a lâmpada do escritório de Bruna"}
+{"category": "synthetic_jardim_delete", "raw": "faz o cortador vltar", "expected": "faz o cortador voltar"}
+{"category": "clean_jardim", "raw": "faz o cortador voltar", "expected": "faz o cortador voltar"}
+{"category": "synthetic_limpeza_transpose", "raw": "manda o aspriador robô pra base", "expected": "manda o aspirador robô pra base"}
+{"category": "clean_limpeza", "raw": "manda o aspirador robô pra base", "expected": "manda o aspirador robô pra base"}
+{"category": "synthetic_midia_substitute", "raw": "o que está tacando", "expected": "o que está tocando"}
+{"category": "clean_midia", "raw": "o que está tocando", "expected": "o que está tocando"}
+{"category": "synthetic_presenca_delete", "raw": "em que lugr da casa está alguém", "expected": "em que lugar da casa está alguém"}
+{"category": "clean_presenca", "raw": "em que lugar da casa está alguém", "expected": "em que lugar da casa está alguém"}
+{"category": "synthetic_rotinas_transpose", "raw": "aitva a rotina sair de casa", "expected": "ativa a rotina sair de casa"}
+{"category": "clean_rotinas", "raw": "ativa a rotina sair de casa", "expected": "ativa a rotina sair de casa"}
+{"category": "synthetic_satelite_substitute", "raw": "apega a luz desse cômodo", "expected": "apaga a luz desse cômodo"}
+{"category": "clean_satelite", "raw": "apaga a luz desse cômodo", "expected": "apaga a luz desse cômodo"}
+{"category": "synthetic_seguranca_delete", "raw": "tranque a fechadura da pota da frente", "expected": "tranque a fechadura da porta da frente"}
+{"category": "clean_seguranca", "raw": "tranque a fechadura da porta da frente", "expected": "tranque a fechadura da porta da frente"}
+{"category": "synthetic_tempo_transpose", "raw": "diimnui cinco minutos do timer", "expected": "diminui cinco minutos do timer"}
+{"category": "clean_tempo", "raw": "diminui cinco minutos do timer", "expected": "diminui cinco minutos do timer"}
+{"category": "synthetic_ambiente_substitute", "raw": "como está a ueidade no escritório de Jaime", "expected": "como está a umidade no escritório de Jaime"}
+{"category": "clean_ambiente", "raw": "como está a umidade no escritório de Jaime", "expected": "como está a umidade no escritório de Jaime"}
+{"category": "synthetic_calendario_delete", "raw": "o que tem no calendário sexta-feia", "expected": "o que tem no calendário sexta-feira"}
+{"category": "clean_calendario", "raw": "o que tem no calendário sexta-feira", "expected": "o que tem no calendário sexta-feira"}
+{"category": "synthetic_cenas_transpose", "raw": "atiav a cena trabalho", "expected": "ativa a cena trabalho"}
+{"category": "clean_cenas", "raw": "ativa a cena trabalho", "expected": "ativa a cena trabalho"}
+{"category": "synthetic_clima_externo_substitute", "raw": "como fica o cliia hoje", "expected": "como fica o clima hoje"}
+{"category": "clean_clima_externo", "raw": "como fica o clima hoje", "expected": "como fica o clima hoje"}
+{"category": "synthetic_climatizacao_delete", "raw": "liga o vetilador de teto", "expected": "liga o ventilador de teto"}
+{"category": "clean_climatizacao", "raw": "liga o ventilador de teto", "expected": "liga o ventilador de teto"}
+{"category": "synthetic_comunicacao_transpose", "raw": "teleofne para Jaime", "expected": "telefone para Jaime"}
+{"category": "clean_comunicacao", "raw": "telefone para Jaime", "expected": "telefone para Jaime"}
+{"category": "synthetic_consulta_substitute", "raw": "onde está o ventioador", "expected": "onde está o ventilador"}
+{"category": "clean_consulta", "raw": "onde está o ventilador", "expected": "onde está o ventilador"}
+{"category": "synthetic_cortinas_delete", "raw": "deixa a cortina do esritório em 75%", "expected": "deixa a cortina do escritório em 75%"}
+{"category": "clean_cortinas", "raw": "deixa a cortina do escritório em 75%", "expected": "deixa a cortina do escritório em 75%"}
+{"category": "synthetic_dispositivo_transpose", "raw": "ligue a televisão do escritório de Burna", "expected": "ligue a televisão do escritório de Bruna"}
+{"category": "clean_dispositivo", "raw": "ligue a televisão do escritório de Bruna", "expected": "ligue a televisão do escritório de Bruna"}
+{"category": "synthetic_eletrodomesticos_substitute", "raw": "a máquiia termina que horas", "expected": "a máquina termina que horas"}
+{"category": "clean_eletrodomesticos", "raw": "a máquina termina que horas", "expected": "a máquina termina que horas"}
+{"category": "synthetic_energia_delete", "raw": "a cafteira está puxando quanto", "expected": "a cafeteira está puxando quanto"}
+{"category": "clean_energia", "raw": "a cafeteira está puxando quanto", "expected": "a cafeteira está puxando quanto"}
+{"category": "synthetic_grupos_unchanged_no_eligible_token", "raw": "liga tudo do casa toda", "expected": "liga tudo do casa toda"}
+{"category": "clean_grupos", "raw": "liga tudo do casa toda", "expected": "liga tudo do casa toda"}
+{"category": "synthetic_iluminacao_substitute", "raw": "bralho da fita LED da varanda em 100%", "expected": "brilho da fita LED da varanda em 100%"}
+{"category": "clean_iluminacao", "raw": "brilho da fita LED da varanda em 100%", "expected": "brilho da fita LED da varanda em 100%"}
+{"category": "synthetic_jardim_delete", "raw": "para o cortador por enqanto", "expected": "para o cortador por enquanto"}
+{"category": "clean_jardim", "raw": "para o cortador por enquanto", "expected": "para o cortador por enquanto"}
+{"category": "synthetic_limpeza_transpose", "raw": "carerga o robô aspirador", "expected": "carrega o robô aspirador"}
+{"category": "clean_limpeza", "raw": "carrega o robô aspirador", "expected": "carrega o robô aspirador"}
+{"category": "synthetic_midia_unchanged_no_eligible_token", "raw": "bota rock", "expected": "bota rock"}
+{"category": "clean_midia", "raw": "bota rock", "expected": "bota rock"}
+{"category": "synthetic_presenca_delete", "raw": "confere se alguém está no coredor", "expected": "confere se alguém está no corredor"}
+{"category": "clean_presenca", "raw": "confere se alguém está no corredor", "expected": "confere se alguém está no corredor"}
+{"category": "synthetic_rotinas_transpose", "raw": "aapga a casa", "expected": "apaga a casa"}
+{"category": "clean_rotinas", "raw": "apaga a casa", "expected": "apaga a casa"}
+{"category": "synthetic_satelite_substitute", "raw": "coluca rock aqui", "expected": "coloca rock aqui"}
+{"category": "clean_satelite", "raw": "coloca rock aqui", "expected": "coloca rock aqui"}
+{"category": "synthetic_seguranca_delete", "raw": "como está a porta da frete", "expected": "como está a porta da frente"}
+{"category": "clean_seguranca", "raw": "como está a porta da frente", "expected": "como está a porta da frente"}
+{"category": "synthetic_tempo_transpose", "raw": "reduz o tiemr em um minuto", "expected": "reduz o timer em um minuto"}
+{"category": "clean_tempo", "raw": "reduz o timer em um minuto", "expected": "reduz o timer em um minuto"}
+{"category": "synthetic_ambiente_substitute", "raw": "me fala a temperaeura do corredor", "expected": "me fala a temperatura do corredor"}
+{"category": "clean_ambiente", "raw": "me fala a temperatura do corredor", "expected": "me fala a temperatura do corredor"}
+{"category": "synthetic_calendario_delete", "raw": "tem alguma coisa na minha agena hoje", "expected": "tem alguma coisa na minha agenda hoje"}
+{"category": "clean_calendario", "raw": "tem alguma coisa na minha agenda hoje", "expected": "tem alguma coisa na minha agenda hoje"}
+{"category": "synthetic_cenas_transpose", "raw": "liga a cena relaaxr", "expected": "liga a cena relaxar"}
+{"category": "clean_cenas", "raw": "liga a cena relaxar", "expected": "liga a cena relaxar"}
+{"category": "synthetic_clima_externo_substitute", "raw": "qual a prevosão para hoje", "expected": "qual a previsão para hoje"}
+{"category": "clean_clima_externo", "raw": "qual a previsão para hoje", "expected": "qual a previsão para hoje"}
+{"category": "synthetic_climatizacao_delete", "raw": "liga o ar-condicionado do qurto", "expected": "liga o ar-condicionado do quarto"}
+{"category": "clean_climatizacao", "raw": "liga o ar-condicionado do quarto", "expected": "liga o ar-condicionado do quarto"}
+{"category": "synthetic_comunicacao_unchanged_no_eligible_token", "raw": "liga para pai", "expected": "liga para pai"}
+{"category": "clean_comunicacao", "raw": "liga para pai", "expected": "liga para pai"}
+{"category": "synthetic_consulta_substitute", "raw": "quais aparelhos tem no banheioo", "expected": "quais aparelhos tem no banheiro"}
+{"category": "clean_consulta", "raw": "quais aparelhos tem no banheiro", "expected": "quais aparelhos tem no banheiro"}
+{"category": "synthetic_cortinas_delete", "raw": "qual a posição da cotina da sala", "expected": "qual a posição da cortina da sala"}
+{"category": "clean_cortinas", "raw": "qual a posição da cortina da sala", "expected": "qual a posição da cortina da sala"}
+{"category": "synthetic_dispositivo_transpose", "raw": "liga o abajur da varanad", "expected": "liga o abajur da varanda"}
+{"category": "clean_dispositivo", "raw": "liga o abajur da varanda", "expected": "liga o abajur da varanda"}
+{"category": "synthetic_eletrodomesticos_substitute", "raw": "a air fiyer terminou", "expected": "a air fryer terminou"}
+{"category": "clean_eletrodomesticos", "raw": "a air fryer terminou", "expected": "a air fryer terminou"}
+{"category": "synthetic_energia_delete", "raw": "tem algua bateria acabando", "expected": "tem alguma bateria acabando"}
+{"category": "clean_energia", "raw": "tem alguma bateria acabando", "expected": "tem alguma bateria acabando"}
+{"category": "synthetic_grupos_transpose", "raw": "tem alguam coisa ligada no andar de baixo", "expected": "tem alguma coisa ligada no andar de baixo"}
+{"category": "clean_grupos", "raw": "tem alguma coisa ligada no andar de baixo", "expected": "tem alguma coisa ligada no andar de baixo"}
+{"category": "synthetic_iluminacao_substitute", "raw": "acenda a lâmpada da área de seiviço", "expected": "acenda a lâmpada da área de serviço"}
+{"category": "clean_iluminacao", "raw": "acenda a lâmpada da área de serviço", "expected": "acenda a lâmpada da área de serviço"}
+{"category": "synthetic_jardim_delete", "raw": "pausa o cortador de grma", "expected": "pausa o cortador de grama"}
+{"category": "clean_jardim", "raw": "pausa o cortador de grama", "expected": "pausa o cortador de grama"}
+{"category": "synthetic_limpeza_transpose", "raw": "manda o aspirador robô limpra a varanda", "expected": "manda o aspirador robô limpar a varanda"}
+{"category": "clean_limpeza", "raw": "manda o aspirador robô limpar a varanda", "expected": "manda o aspirador robô limpar a varanda"}
+{"category": "synthetic_midia_substitute", "raw": "desliga o alaatório", "expected": "desliga o aleatório"}
+{"category": "clean_midia", "raw": "desliga o aleatório", "expected": "desliga o aleatório"}
+{"category": "synthetic_presenca_delete", "raw": "tem alguém no escritório de Jame", "expected": "tem alguém no escritório de Jaime"}
+{"category": "clean_presenca", "raw": "tem alguém no escritório de Jaime", "expected": "tem alguém no escritório de Jaime"}
+{"category": "synthetic_rotinas_transpose", "raw": "roda a rotina modo traablho", "expected": "roda a rotina modo trabalho"}
+{"category": "clean_rotinas", "raw": "roda a rotina modo trabalho", "expected": "roda a rotina modo trabalho"}
+{"category": "synthetic_satelite_substitute", "raw": "toca minha playliet aqui", "expected": "toca minha playlist aqui"}
+{"category": "clean_satelite", "raw": "toca minha playlist aqui", "expected": "toca minha playlist aqui"}
+{"category": "synthetic_seguranca_delete", "raw": "como está o portão da garagm", "expected": "como está o portão da garagem"}
+{"category": "clean_seguranca", "raw": "como está o portão da garagem", "expected": "como está o portão da garagem"}
+{"category": "synthetic_tempo_transpose", "raw": "adiciona cicno minutos ao timer", "expected": "adiciona cinco minutos ao timer"}
+{"category": "clean_tempo", "raw": "adiciona cinco minutos ao timer", "expected": "adiciona cinco minutos ao timer"}
+{"category": "synthetic_ambiente_substitute", "raw": "como está o ruado no banheiro", "expected": "como está o ruído no banheiro"}
+{"category": "clean_ambiente", "raw": "como está o ruído no banheiro", "expected": "como está o ruído no banheiro"}
+{"category": "synthetic_calendario_delete", "raw": "o que tem no calendário amanã", "expected": "o que tem no calendário amanhã"}
+{"category": "clean_calendario", "raw": "o que tem no calendário amanhã", "expected": "o que tem no calendário amanhã"}
+{"category": "synthetic_cenas_transpose", "raw": "modo relaaxr", "expected": "modo relaxar"}
+{"category": "clean_cenas", "raw": "modo relaxar", "expected": "modo relaxar"}
+{"category": "synthetic_clima_externo_substitute", "raw": "qual a paevisão para domingo", "expected": "qual a previsão para domingo"}
+{"category": "clean_clima_externo", "raw": "qual a previsão para domingo", "expected": "qual a previsão para domingo"}
+{"category": "synthetic_climatizacao_delete", "raw": "coloca o ventilaor do ar-condicionado do quarto em máxima", "expected": "coloca o ventilador do ar-condicionado do quarto em máxima"}
+{"category": "clean_climatizacao", "raw": "coloca o ventilador do ar-condicionado do quarto em máxima", "expected": "coloca o ventilador do ar-condicionado do quarto em máxima"}
+{"category": "synthetic_comunicacao_transpose", "raw": "faz um anúncio no escritório de Jaiem", "expected": "faz um anúncio no escritório de Jaime"}
+{"category": "clean_comunicacao", "raw": "faz um anúncio no escritório de Jaime", "expected": "faz um anúncio no escritório de Jaime"}
+{"category": "synthetic_consulta_substitute", "raw": "o que tem na coainha", "expected": "o que tem na cozinha"}
+{"category": "clean_consulta", "raw": "o que tem na cozinha", "expected": "o que tem na cozinha"}
+{"category": "synthetic_cortinas_delete", "raw": "feche a crtina da sala", "expected": "feche a cortina da sala"}
+{"category": "clean_cortinas", "raw": "feche a cortina da sala", "expected": "feche a cortina da sala"}
+{"category": "synthetic_dispositivo_transpose", "raw": "quero a tomaad do corredor desligado", "expected": "quero a tomada do corredor desligado"}
+{"category": "clean_dispositivo", "raw": "quero a tomada do corredor desligado", "expected": "quero a tomada do corredor desligado"}
+{"category": "synthetic_eletrodomesticos_substitute", "raw": "quando a máquina de lavar termena", "expected": "quando a máquina de lavar termina"}
+{"category": "clean_eletrodomesticos", "raw": "quando a máquina de lavar termina", "expected": "quando a máquina de lavar termina"}
+{"category": "synthetic_energia_delete", "raw": "deliga a tomada", "expected": "desliga a tomada"}
+{"category": "clean_energia", "raw": "desliga a tomada", "expected": "desliga a tomada"}
+{"category": "synthetic_grupos_transpose", "raw": "ativa as luzes do andar de baiox", "expected": "ativa as luzes do andar de baixo"}
+{"category": "clean_grupos", "raw": "ativa as luzes do andar de baixo", "expected": "ativa as luzes do andar de baixo"}
+{"category": "synthetic_iluminacao_substitute", "raw": "o abaiur do banheiro está apagada", "expected": "o abajur do banheiro está apagada"}
+{"category": "clean_iluminacao", "raw": "o abajur do banheiro está apagada", "expected": "o abajur do banheiro está apagada"}
+{"category": "synthetic_jardim_delete", "raw": "segra o robô cortador", "expected": "segura o robô cortador"}
+{"category": "clean_jardim", "raw": "segura o robô cortador", "expected": "segura o robô cortador"}

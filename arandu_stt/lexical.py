@@ -98,9 +98,9 @@ class Change:
 
 
 class AranduLexicalResolver:
-    def __init__(self, inventory_path: Path, resources_dir: Path):
+    def __init__(self, inventory_path: Path, resources_dir: Path, inventory: dict | None = None):
         self.resources_dir = resources_dir
-        self.inventory = json.loads(inventory_path.read_text(encoding='utf-8'))
+        self.inventory = inventory if inventory is not None else json.loads(inventory_path.read_text(encoding='utf-8'))
         self.confusions = json.loads((resources_dir/'asr_confusions.json').read_text(encoding='utf-8'))
         self.common_names = [x.strip() for x in (resources_dir/'common_names_ptbr.txt').read_text(encoding='utf-8').splitlines() if x.strip()]
         self.device_types = [x.strip() for x in (resources_dir/'home_device_types_ptbr.txt').read_text(encoding='utf-8').splitlines() if x.strip()]

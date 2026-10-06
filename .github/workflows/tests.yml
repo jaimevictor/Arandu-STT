@@ -15,7 +15,7 @@ jobs:
       - name: Install test dependencies
         run: pip install numpy rapidfuzz pyyaml websockets wyoming
       - name: Compile sources
-        run: python -m py_compile arandu_stt/server.py arandu_stt/lexical.py arandu_stt/inventory_sync.py arandu_stt/model_download.py arandu_stt/launcher.py arandu_stt/wyoming_discovery.py
+        run: python -m compileall -q arandu_stt tools
       - name: Lexical resolver tests
         run: python -m unittest discover -s arandu_stt/tests -v
       - name: Validate app metadata
@@ -28,7 +28,7 @@ jobs:
           assert root['name']
           for key in ('name','version','slug','description','arch'):
               assert cfg.get(key), key
-          assert cfg['version'] == '0.1.1'
+          assert cfg['version'] == '2.0.0'
           assert cfg['slug']=='arandu_stt'
           assert 'amd64' in cfg['arch']
           assert cfg.get('discovery') == ['wyoming']

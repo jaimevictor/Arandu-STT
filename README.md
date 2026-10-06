@@ -2,7 +2,15 @@
 
 Speech-to-text local PT-BR para Home Assistant Assist.
 
-**MVP 0.1.1:** FastConformer PT-BR CTC INT8 + Arandu Lexical Resolver + Wyoming.
+**2.0.0:** FastConformer PT-BR CTC INT8 + motor lexical contextual PT-BR + Wyoming.
+
+O perfil `full` agora usa vocabulário fechado, candidatos indexados e beam search, com contexto HA atualizado em background.
+Pesos, política e confiança heurística são configuráveis. Modelo acústico e método de instalação permanecem os mesmos.
+
+- [Instalação, atualização e rollback](arandu_stt/UPGRADE_2.0.md)
+- [Arquitetura e auditoria](arandu_stt/ARCHITECTURE_2.0.md)
+- [Relatório técnico e métricas](arandu_stt/REPORT_2.0.md)
+- [Changelog](CHANGELOG.md)
 
 ## Arquitetura
 
@@ -14,9 +22,9 @@ Home Assistant
 Arandu STT App
   ├─ FastConformer INT8
   ├─ normalização PT-BR
-  ├─ aliases acústicos
-  ├─ fuzzy conservador
-  └─ contexto gerado do inventário HA
+  ├─ vocabulário fechado + gramática funcional
+  ├─ candidatos indexados + beam search
+  └─ snapshots de contexto HA atualizados em background
       ↓
 Arandu NLU / Conversation agent
 ```
@@ -55,4 +63,5 @@ Os pesos não são versionados nem redistribuídos neste repositório.
 
 ## Estado
 
-MVP experimental. Antes de tratar como release estável, validar instalação limpa no HAOS amd64, consumo de RAM/CPU, latência e comportamento após reboot/update.
+Implementação 2.0 e build Docker verificados localmente; estágio experimental até validar fala real e instalação limpa no HAOS amd64.
+Os quatro datasets fornecidos estão empacotados, incluindo 569 registros de nomes, variantes e apelidos.

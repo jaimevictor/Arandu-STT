@@ -1,5 +1,5 @@
 name: Arandu STT
-version: "0.1.1"
+version: "2.0.0"
 slug: arandu_stt
 description: STT PT-BR local com FastConformer INT8, correção contextual e Wyoming
 arch:
@@ -25,9 +25,19 @@ options:
   profile: full
   debug_text: false
   refresh_inventory: true
+  lexical_enabled: true
+  closed_vocabulary: true
+  generic_weight: 7
+  home_assistant_weight: 10
+  inventory_refresh_seconds: 60
 schema:
   threads: "int(1,8)"
   padding_ms: "list(0|100|200|300)"
-  profile: "list(raw|normalize_only|acoustic_only|fuzzy_only|inventory_only|full)"
+  profile: "list(raw|normalize_only|acoustic_only|fuzzy_only|inventory_only|full|legacy_full)"
   debug_text: bool
   refresh_inventory: bool
+  lexical_enabled: bool
+  closed_vocabulary: bool
+  generic_weight: "int(0,100)"
+  home_assistant_weight: "int(0,100)"
+  inventory_refresh_seconds: "int(0,86400)"

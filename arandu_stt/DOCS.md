@@ -1,6 +1,8 @@
 # Arandu STT
 
-STT local em português do Brasil para Home Assistant Assist, usando FastConformer CTC INT8 + Arandu Lexical Resolver e protocolo Wyoming.
+STT local em português do Brasil para Home Assistant Assist, usando FastConformer CTC INT8 + motor contextual Arandu 2.0 e protocolo Wyoming.
+
+Consulte [atualização e rollback](UPGRADE_2.0.md), [arquitetura](ARCHITECTURE_2.0.md) e [validação e limitações](REPORT_2.0.md).
 
 ## Instalação
 
@@ -22,7 +24,10 @@ Nota técnica: o URI de descoberta automática usa o hostname informado pelo Sup
 - `debug_text`: grava RAW/FINAL nos logs e métricas; desligado por padrão.
 - `refresh_inventory`: recria o léxico a partir dos registries do HA ao iniciar. Padrão: ligado.
 
-Após adicionar, remover ou renomear dispositivos/áreas/pessoas, reinicie o App para atualizar o inventário lexical.
+Nomes, áreas e aliases HA são atualizados em background a cada 60 segundos por padrão.
+`lexical_enabled: false` restaura o corretor anterior. `closed_vocabulary: false` preserva palavras desconhecidas.
+`generic_weight` e `home_assistant_weight` configuram priors normalizados, inicialmente 7 e 10.
+`inventory_refresh_seconds: 0` desativa atualização periódica. Veja opções completas em [UPGRADE_2.0.md](UPGRADE_2.0.md).
 
 ## Privacidade
 

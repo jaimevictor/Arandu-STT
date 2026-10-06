@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+from contextlib import suppress
 from datetime import datetime, timezone
 from functools import partial
 import json
@@ -20,10 +21,12 @@ import numpy as np
 from wyoming.asr import Transcribe, Transcript
 from wyoming.audio import AudioChunk, AudioChunkConverter, AudioStart, AudioStop
 from wyoming.event import Event
+from wyoming.error import Error
 from wyoming.info import AsrModel, AsrProgram, Attribution, Describe, Info
 from wyoming.server import AsyncEventHandler, AsyncServer
 
-from lexical import AranduLexicalResolver
+from contextual_lexical import ContextualResolver, LexicalError
+from home_assistant_context import refresh_loop
 from wyoming_discovery import DiscoveryError, publish_wyoming_discovery
 
 HERE = Path(__file__).resolve().parent
@@ -47,7 +50,7 @@ def build_info() -> Info:
         description='FastConformer PT-BR CTC INT8 + Arandu lexical resolver',
         attribution=attribution,
         installed=True,
-        version='0.1.1',
+        version='2.0.0',
         requires_external_vad=True,
         supports_transcript_streaming=False,
         models=[AsrModel(
@@ -55,7 +58,7 @@ def build_info() -> Info:
             description='FastConformer PT-BR INT8 ONNX + contextual sanitation',
             attribution=attribution,
             installed=True,
-            version='0.1.1',
+            version='2.0.0',
             languages=['pt-BR', 'pt'],
         )],
     )])
@@ -95,7 +98,7 @@ class Metrics:
 
     def log(self, *, duration_s: float, inference_s: float, correction_ms: float,
             queue_s: float, after_stop_s: float, raw: str, final: str,
-            changes: int, padding_ms: int, outcome: str) -> None:
+            changes: int, padding_ms: int, outcome: str, lexical: dict | None = None) -> None:
         entry = {
             'utc': datetime.now(timezone.utc).isoformat(),
             'model': NAME,
@@ -114,6 +117,13 @@ class Metrics:
         if self.debug_text:
             entry['raw'] = raw
             entry['final'] = final
+        if lexical:
+            entry['lexical'] = {k: lexical[k] for k in (
+                'confidence', 'confidence_kind', 'confidence_is_calibrated_probability',
+                'minimum_token_confidence', 'low_confidence', 'forced_corrections',
+                'closed_vocabulary', 'all_tokens_allowed', 'context_generation', 'timings_ms') if k in lexical}
+            if self.debug_text:
+                entry['lexical']['tokens'] = lexical.get('tokens', [])
         with self._lock:
             self.path.parent.mkdir(parents=True, exist_ok=True)
             with self.path.open('a', encoding='utf-8') as file:
@@ -131,7 +141,7 @@ class Metrics:
 
 
 class Handler(AsyncEventHandler):
-    def __init__(self, engine: Engine, resolver: AranduLexicalResolver, metrics: Metrics,
+    def __init__(self, engine: Engine, resolver: ContextualResolver, metrics: Metrics,
                  padding_ms: int, profile: str, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.engine = engine
@@ -219,6 +229,8 @@ class Handler(AsyncEventHandler):
             infer = wait = correction_ms = 0.0
             changes = 0
             outcome = 'empty'
+            resolved = {}
+            error = None
             if self.invalid:
                 outcome = 'invalid'
             elif duration >= .35:
@@ -227,20 +239,29 @@ class Handler(AsyncEventHandler):
                     if self.padding_ms:
                         audio = np.concatenate((audio, np.zeros(round(16000*self.padding_ms/1000), dtype=np.float32)))
                     raw, infer, wait = await asyncio.to_thread(self.engine.recognize, audio)
-                    resolved = self.resolver.apply(raw, self.profile)
+                    resolved = await asyncio.to_thread(self.resolver.apply, raw, self.profile)
                     final = resolved['text']
                     correction_ms = float(resolved['correction_ms'])
                     changes = len(resolved['changes'])
                     outcome = 'ok'
+                except LexicalError as exc:
+                    outcome = 'failure'
+                    error = Error(text=str(exc), code=exc.code)
+                    LOG.error('Correção lexical indisponível: %s', exc.code)
                 except Exception:
                     outcome = 'failure'
+                    error = Error(text='Falha de inferência/correção', code='stt_failure')
                     LOG.exception('Erro de inferencia/correcao')
-            await self.write_event(Transcript(text=final, language='pt-BR').event())
-            LOG.info('[WYOMING] Transcript sent')
+            context = {'arandu': resolved} if resolved.get('confidence_kind') == 'heuristic_lexical' else None
+            if error:
+                await self.write_event(error.event())
+            else:
+                await self.write_event(Transcript(text=final, language='pt-BR', context=context).event())
+            LOG.info('[WYOMING] %s sent', 'Error' if error else 'Transcript')
             elapsed = time.perf_counter() - stop
-            self.metrics.log(duration_s=duration, inference_s=infer, correction_ms=correction_ms,
+            await asyncio.to_thread(self.metrics.log, duration_s=duration, inference_s=infer, correction_ms=correction_ms,
                              queue_s=wait, after_stop_s=elapsed, raw=raw, final=final,
-                             changes=changes, padding_ms=self.padding_ms, outcome=outcome)
+                             changes=changes, padding_ms=self.padding_ms, outcome=outcome, lexical=resolved)
             self.parts.clear()
             return False
         return True
@@ -253,20 +274,41 @@ def parse_args(argv=None):
     p.add_argument('--uri', default='tcp://0.0.0.0:10350')
     p.add_argument('--threads', type=int, default=2)
     p.add_argument('--padding-ms', type=int, choices=(0,100,200,300), default=0)
-    p.add_argument('--profile', choices=('raw','normalize_only','acoustic_only','fuzzy_only','inventory_only','full'), default='full')
+    p.add_argument('--profile', choices=('raw','normalize_only','acoustic_only','fuzzy_only','inventory_only','full','legacy_full'), default='full')
+    p.add_argument('--lexical-config', type=Path, default=HERE/'config'/'lexical.json')
+    p.add_argument('--lexical-disabled', action='store_true')
+    p.add_argument('--open-vocabulary', action='store_true')
+    p.add_argument('--inventory-refresh-seconds', type=int, default=60)
+    p.add_argument('--no-ha-refresh', action='store_true')
+    p.add_argument('--generic-weight', type=float)
+    p.add_argument('--ha-weight', type=float)
     p.add_argument('--metrics', type=Path, default=Path('/data/metrics.jsonl'))
     p.add_argument('--debug-text', action='store_true')
     p.add_argument('--no-discovery', action='store_true')
     a = p.parse_args(argv)
     if not 1 <= a.threads <= 8:
         p.error('--threads precisa estar entre 1 e 8')
+    if not 0 <= a.inventory_refresh_seconds <= 86400:
+        p.error('--inventory-refresh-seconds: 0–86400')
     return a
 
 
 async def main(argv=None):
     a = parse_args(argv)
     logging.basicConfig(level=logging.INFO, format='%(asctime)s %(levelname)s %(message)s')
-    resolver = AranduLexicalResolver(a.inventory, HERE/'resources')
+    overrides = {}
+    if a.lexical_disabled:
+        overrides['enabled'] = False
+    if a.open_vocabulary:
+        overrides['closed_vocabulary'] = False
+    weights = {}
+    if a.generic_weight is not None:
+        weights.update({key: a.generic_weight for key in ('generic_lexicon','household','names','commands')})
+    if a.ha_weight is not None:
+        weights['home_assistant'] = a.ha_weight
+    if weights:
+        overrides['source_weights'] = weights
+    resolver = ContextualResolver(a.inventory, HERE/'resources', config_path=a.lexical_config, overrides=overrides)
     LOG.info('Carregando FastConformer INT8 | threads=%s | profile=%s | padding=%sms', a.threads, a.profile, a.padding_ms)
     LOG.info('Resolver: %s', resolver.stats())
     engine = Engine(a.model_dir, a.threads)
@@ -274,16 +316,27 @@ async def main(argv=None):
     server = AsyncServer.from_uri(a.uri)
     LOG.info('PRONTO: Arandu STT Wyoming %s | profile=%s | padding=%sms', a.uri, a.profile, a.padding_ms)
     handler_factory = partial(Handler, engine, resolver, metrics, a.padding_ms, a.profile)
+    refresh_task = asyncio.create_task(refresh_loop(resolver, a.inventory_refresh_seconds, query_ha=not a.no_ha_refresh)) if a.inventory_refresh_seconds else None
+    try:
+        await serve(server, handler_factory, a.no_discovery)
+    finally:
+        if refresh_task:
+            refresh_task.cancel()
+            with suppress(asyncio.CancelledError):
+                await refresh_task
+
+
+async def serve(server, handler_factory, no_discovery):
     if hasattr(server, 'start'):
         await server.start(handler_factory)
-        if not a.no_discovery:
+        if not no_discovery:
             try:
                 publish_wyoming_discovery(port=10350)
             except DiscoveryError as exc:
                 LOG.warning('[DISCOVERY] %s', exc)
         await server._server.serve_forever()
         return
-    if not a.no_discovery:
+    if not no_discovery:
         try:
             publish_wyoming_discovery(port=10350)
         except DiscoveryError as exc:

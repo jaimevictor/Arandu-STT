@@ -1,0 +1,30 @@
+{"category":"device_error","raw":"liga o ventulador do quarto","expected":"liga o ventilador do quarto"}
+{"category":"name_area","raw":"liga o ventulador do escritorio de jaime","expected":"liga o ventilador do escritório de Jaime"}
+{"category":"sensor_error","raw":"qual a temperatua do quarto","expected":"qual a temperatura do quarto"}
+{"category":"legacy_action_error","raw":"desligua o ventulador","expected":"desliga o ventilador"}
+{"category":"media_error","raw":"bota meu spotifai pra tocar","expected":"bota meu Spotify pra tocar"}
+{"category":"ha_compound_error","raw":"liga lava lemp","expected":"liga Lava Lamp"}
+{"category":"lock_ambiguity","raw":"destranca a porda","expected":"destranca a porta"}
+{"category":"correct_negation","raw":"não desliga o ventilador","expected":"não desliga o ventilador"}
+{"category":"correct_plural","raw":"liga as luzes dos quartos","expected":"liga as luzes dos quartos"}
+{"category":"correct_names","raw":"Pedro e Rafael","expected":"Pedro e Rafael"}
+{"category":"correct_informal","raw":"liga aí o ventilador","expected":"liga aí o ventilador"}
+{"category":"correct_informal","raw":"bota o ventilador pra funcionar","expected":"bota o ventilador pra funcionar"}
+{"category":"correct_informal","raw":"acende a luz daqui","expected":"acende a luz daqui"}
+{"category":"correct_sensor","raw":"tá fazendo quantos graus no quarto","expected":"tá fazendo quantos graus no quarto"}
+{"category":"correct_phone","raw":"onde tá meu telefone","expected":"onde tá meu telefone"}
+{"category":"correct_media","raw":"bota meu Spotify pra tocar","expected":"bota meu Spotify pra tocar"}
+{"category":"correct_compound","raw":"liga o ar-condicionado","expected":"liga o ar-condicionado"}
+{"category":"split_compound","raw":"liga o ar condicionado","expected":"liga o ar-condicionado"}
+{"category":"correct_wifi","raw":"desliga o Wi-Fi","expected":"desliga o Wi-Fi"}
+{"category":"numeric","raw":"ajusta para 22,5°C e 50% às 19:30","expected":"ajusta para 22,5°C e 50% às 19:30"}
+{"category":"numeric","raw":"ajusta para -2,5 graus","expected":"ajusta para -2,5 graus"}
+{"category":"punctuation","raw":"Pode ligar o ventilador?","expected":"Pode ligar o ventilador?"}
+{"category":"punctuation_error","raw":"Qual a temperatua no quarto?","expected":"Qual a temperatura no quarto?"}
+{"category":"correct_general","raw":"hoje estudei história brasileira","expected":"hoje estudei história brasileira"}
+{"category":"correct_general","raw":"amanhã vou ler um livro","expected":"amanhã vou ler um livro"}
+{"category":"correct_general","raw":"gosto de música e cinema","expected":"gosto de música e cinema"}
+{"category":"correct_general","raw":"a poda","expected":"a poda"}
+{"category":"unknown_general_limitation","raw":"antropologia epistemológica","expected":"antropologia epistemológica"}
+{"category":"unknown_low_confidence","raw":"xyzqvv","expected":"xyzqvv"}
+{"category":"valid_homophone_limitation","raw":"destranca a poda","expected":"destranca a porta"}

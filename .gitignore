@@ -9,3 +9,4 @@ metrics.jsonl
 arandu_ha_inventory.json
 models/
 hub/
+dist/
