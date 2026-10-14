@@ -1,6 +1,6 @@
 # Arandu STT
 
-STT local em português do Brasil para Home Assistant Assist, usando FastConformer CTC INT8 + motor contextual Arandu 2.0 e protocolo Wyoming.
+STT local em português do Brasil para Home Assistant Assist, usando FastConformer CTC adaptado FP32 + motor contextual Arandu e protocolo Wyoming. A versão 2.1 usa o modelo treinado como padrão; veja [resultados e reversão do modelo](MODEL_2.1.md).
 
 Consulte [atualização e rollback](UPGRADE_2.0.md), [arquitetura](ARCHITECTURE_2.0.md) e [validação e limitações](REPORT_2.0.md).
 
@@ -8,7 +8,7 @@ Consulte [atualização e rollback](UPGRADE_2.0.md), [arquitetura](ARCHITECTURE_
 
 1. Adicione este repositório em **Settings > Apps > Install app > ⋮ > Repositories**.
 2. Instale **Arandu STT**.
-3. Na primeira inicialização, aguarde o download do modelo INT8 (aprox. 131 MB) e a criação do inventário lexical a partir do Home Assistant.
+3. Na primeira inicialização, aguarde o download do modelo adaptado FP32 (aprox. 456 MB) e a criação do inventário lexical a partir do Home Assistant.
 4. O serviço anuncia `wyoming` e deve aparecer como descoberto em **Settings > Devices & services**. Aceite a descoberta.
 5. Em **Settings > Voice assistants**, selecione `Arandu STT` como mecanismo de speech-to-text no pipeline desejado.
 
@@ -18,6 +18,7 @@ Nota técnica: o URI de descoberta automática usa o hostname informado pelo Sup
 
 ## Opções
 
+- `model_variant`: `adapted` (padrão, FP32 treinado) ou `original` (INT8 anterior). Reinicie após alterar.
 - `threads`: threads de CPU do sherpa-onnx. Padrão: `2`.
 - `padding_ms`: silêncio sintético ao fim do áudio (`0`, `100`, `200`, `300`). Padrão: `0`.
 - `profile`: perfil do resolver. Produção: `full`.
@@ -35,6 +36,6 @@ O App consulta localmente os registries de entidades, dispositivos e áreas do s
 
 ## Modelo e licença
 
-Os pesos não são incluídos neste repositório. Na primeira inicialização, o App baixa a conversão INT8 do checkpoint `nvidia/stt_pt_fastconformer_hybrid_large_pc`.
+Os pesos não são incluídos no Git. Na primeira inicialização, o App baixa o modelo adaptado da release 2.1.0. É um derivado do checkpoint `nvidia/stt_pt_fastconformer_hybrid_large_pc`, distribuído sob CC BY-NC 4.0 com atribuição NVIDIA e Arandu. A opção `original` baixa a conversão INT8 anterior.
 
 O checkpoint upstream é **CC BY-NC 4.0**. Portanto, o uso dos pesos possui restrições de uso comercial independentes da licença do código do Arandu.

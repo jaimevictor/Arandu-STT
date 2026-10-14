@@ -3,11 +3,20 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
+import tempfile
+import urllib.request
 from pathlib import Path
 
 REPO = "csukuangfj/sherpa-onnx-nemo-stt_pt_fastconformer_hybrid_large_pc-int8"
 MODEL = "model.int8.onnx"
 UPSTREAM = "nvidia/stt_pt_fastconformer_hybrid_large_pc"
+ADAPTED_VERSION = "arandu-ctc-20261013-fp32"
+ADAPTED_URL = "https://github.com/jaimevictor/Arandu-STT/releases/download/v2.1.0"
+ADAPTED_HASHES = {
+    "model.onnx": "eb6d873e87fa113e9c5bb42131f2b2c5cc6b2cf1ce822b9884083691463356d3",
+    "tokens.txt": "c79cd022b6b04e090901e1acce380ad9476bb6a3694112199b835256bb079b9b",
+}
 
 
 def sha256(path: Path) -> str:
@@ -18,7 +27,7 @@ def sha256(path: Path) -> str:
     return h.hexdigest()
 
 
-def ensure_model(dest: Path) -> dict:
+def ensure_original_model(dest: Path) -> dict:
     from huggingface_hub import HfApi, hf_hub_download
 
     dest.mkdir(parents=True, exist_ok=True)
@@ -55,4 +64,47 @@ def ensure_model(dest: Path) -> dict:
     }
     manifest.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"[MODEL] OK SHA256={data['model_sha256']}", flush=True)
+    return data
+
+
+def ensure_model(dest: Path, variant: str = "adapted") -> dict:
+    """Install into a versioned directory; never overwrite the original model."""
+    if variant == "original":
+        return ensure_original_model(dest)
+    if variant != "adapted":
+        raise ValueError(f"Modelo desconhecido: {variant}")
+    dest.mkdir(parents=True, exist_ok=True)
+    for filename, expected in ADAPTED_HASHES.items():
+        target = dest / filename
+        if target.is_file() and sha256(target) == expected:
+            continue
+        print(f"[MODEL] Baixando {ADAPTED_VERSION}: {filename}", flush=True)
+        temporary = None
+        try:
+            with tempfile.NamedTemporaryFile(dir=dest, suffix=".download", delete=False) as output:
+                temporary = Path(output.name)
+                request = urllib.request.Request(f"{ADAPTED_URL}/{filename}", headers={"User-Agent": "Arandu-STT/2.1.0"})
+                with urllib.request.urlopen(request, timeout=120) as response:
+                    while chunk := response.read(4 * 1024 * 1024):
+                        output.write(chunk)
+            if sha256(temporary) != expected:
+                raise RuntimeError(f"SHA256 inválido: {filename}; modelo não instalado")
+            os.replace(temporary, target)
+        finally:
+            if temporary is not None:
+                temporary.unlink(missing_ok=True)
+    data = {
+        "version": ADAPTED_VERSION,
+        "upstream": UPSTREAM,
+        "upstream_license": "CC-BY-NC-4.0",
+        "source": ADAPTED_URL,
+        "model_filename": "model.onnx",
+        "model_bytes": (dest / "model.onnx").stat().st_size,
+        "model_sha256": ADAPTED_HASHES["model.onnx"],
+        "tokens_sha256": ADAPTED_HASHES["tokens.txt"],
+    }
+    manifest = dest / "manifest.json"
+    staged_manifest = dest / "manifest.json.tmp"
+    staged_manifest.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    os.replace(staged_manifest, manifest)
     return data

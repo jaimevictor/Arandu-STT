@@ -2,10 +2,12 @@
 
 Speech-to-text local PT-BR para Home Assistant Assist.
 
-**2.0.0:** FastConformer PT-BR CTC INT8 + motor lexical contextual PT-BR + Wyoming.
+**2.1.0:** FastConformer PT-BR CTC adaptado FP32 + motor lexical contextual PT-BR + Wyoming.
+
+[Modelo treinado, resultados e reversão](arandu_stt/MODEL_2.1.md).
 
 O perfil `full` agora usa vocabulário fechado, candidatos indexados e beam search, com contexto HA atualizado em background.
-Pesos, política e confiança heurística são configuráveis. Modelo acústico e método de instalação permanecem os mesmos.
+Pesos, política e confiança heurística são configuráveis. O modelo acústico padrão foi atualizado; o método de instalação permanece o mesmo.
 
 - [Instalação, atualização e rollback](arandu_stt/UPGRADE_2.0.md)
 - [Arquitetura e auditoria](arandu_stt/ARCHITECTURE_2.0.md)
@@ -20,7 +22,7 @@ Microfone / Assist
 Home Assistant
       ↓ Wyoming
 Arandu STT App
-  ├─ FastConformer INT8
+  ├─ FastConformer CTC adaptado FP32
   ├─ normalização PT-BR
   ├─ vocabulário fechado + gramática funcional
   ├─ candidatos indexados + beam search
@@ -36,7 +38,7 @@ O projeto é um **Home Assistant App** (antigo add-on). Não substitui nem dupli
 1. Em **Settings > Apps > Install app**, abra o menu `⋮` e escolha **Repositories**.
 2. Adicione a URL deste repositório GitHub.
 3. Instale **Arandu STT**.
-4. Inicie o App e acompanhe o log na primeira execução. O modelo INT8 é baixado automaticamente.
+4. Inicie o App e acompanhe o log na primeira execução. O modelo adaptado FP32 é baixado automaticamente (aprox. 456 MB).
 5. Aceite a descoberta **Wyoming Protocol** em **Settings > Devices & services**.
 6. Selecione **Arandu STT** no pipeline do Assist.
 
@@ -59,7 +61,7 @@ O repositório **não contém inventário de nenhuma casa**. O App consulta loca
 - Modelo NVIDIA usado em runtime: `nvidia/stt_pt_fastconformer_hybrid_large_pc`, **CC BY-NC 4.0**.
 - Conversão INT8 baixada em runtime: `csukuangfj/sherpa-onnx-nemo-stt_pt_fastconformer_hybrid_large_pc-int8`.
 
-Os pesos não são versionados nem redistribuídos neste repositório.
+Os pesos derivados FP32 são distribuídos como assets da release 2.1.0, sob CC BY-NC 4.0; não são versionados no Git.
 
 ## Estado
 

@@ -1,7 +1,7 @@
 name: Arandu STT
-version: "2.0.0"
+version: "2.1.0"
 slug: arandu_stt
-description: STT PT-BR local com FastConformer INT8, correção contextual e Wyoming
+description: STT PT-BR local com FastConformer adaptado, correção contextual e Wyoming
 arch:
   - amd64
 init: false
@@ -20,6 +20,7 @@ backup_exclude:
   - "models*"
   - "hub*"
 options:
+  model_variant: adapted
   threads: 2
   padding_ms: 0
   profile: full
@@ -31,6 +32,7 @@ options:
   home_assistant_weight: 10
   inventory_refresh_seconds: 60
 schema:
+  model_variant: "list(adapted|original)"
   threads: "int(1,8)"
   padding_ms: "list(0|100|200|300)"
   profile: "list(raw|normalize_only|acoustic_only|fuzzy_only|inventory_only|full|legacy_full)"

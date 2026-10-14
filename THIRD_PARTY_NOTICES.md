@@ -4,7 +4,7 @@
 
 Upstream model: `nvidia/stt_pt_fastconformer_hybrid_large_pc`.
 
-The upstream checkpoint is licensed under **CC BY-NC 4.0**. The Arandu repository does not contain or redistribute its weights. The Home Assistant App downloads an INT8 ONNX conversion at runtime.
+The upstream checkpoint is licensed under **CC BY-NC 4.0** (https://creativecommons.org/licenses/by-nc/4.0/). Arandu 2.1 distributes a derivative FP32 ONNX model as a GitHub release asset under the same license. NVIDIA supplied the base model; Arandu adapted its CTC decoder and exported it on 2026-10-13. Source: `nvidia/stt_pt_fastconformer_hybrid_large_pc`, revision `036da25fa32e3f11c11105448482845950840685`. Model weights are separate from MIT-licensed code. See `arandu_stt/MODEL_2.1.md` for changes, evaluation and rollback.
 
 ## INT8 ONNX conversion
 

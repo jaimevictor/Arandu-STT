@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Arandu STT production: Wyoming + FastConformer INT8 + lexical resolver.
+"""Arandu STT production: Wyoming + FastConformer CTC + lexical resolver.
 
-Pipeline: Wyoming PCM -> optional synthetic tail padding -> FastConformer CTC INT8 ->
+Pipeline: Wyoming PCM -> optional synthetic tail padding -> FastConformer CTC ->
 Arandu lexical resolver (full) -> Transcript. No Home Assistant commands are executed here.
 """
 from __future__ import annotations
@@ -31,7 +31,7 @@ from wyoming_discovery import DiscoveryError, publish_wyoming_discovery
 
 HERE = Path(__file__).resolve().parent
 LOG = logging.getLogger('arandu')
-NAME = 'arandu-fastconformer-ptbr-int8'
+NAME = 'arandu-fastconformer-ptbr-int8'  # Preserve Assist's existing selected model ID.
 UPSTREAM = 'https://huggingface.co/nvidia/stt_pt_fastconformer_hybrid_large_pc'
 MAX_SECONDS = 35
 MAX_INPUT_BYTES = 2 * 16000 * MAX_SECONDS
@@ -47,18 +47,18 @@ def build_info() -> Info:
     attribution = Attribution(name='NVIDIA checkpoint + Arandu lexical resolver', url=UPSTREAM)
     return Info(asr=[AsrProgram(
         name='arandu-stt',
-        description='FastConformer PT-BR CTC INT8 + Arandu lexical resolver',
+        description='FastConformer PT-BR CTC + Arandu lexical resolver',
         attribution=attribution,
         installed=True,
-        version='2.0.0',
+        version='2.1.0',
         requires_external_vad=True,
         supports_transcript_streaming=False,
         models=[AsrModel(
             name=NAME,
-            description='FastConformer PT-BR INT8 ONNX + contextual sanitation',
+            description='FastConformer PT-BR ONNX + contextual sanitation',
             attribution=attribution,
             installed=True,
-            version='2.0.0',
+            version='2.1.0',
             languages=['pt-BR', 'pt'],
         )],
     )])
@@ -67,10 +67,12 @@ def build_info() -> Info:
 class Engine:
     def __init__(self, model_dir: Path, threads: int):
         import sherpa_onnx
-        model = model_dir / 'model.int8.onnx'
+        model = model_dir / 'model.onnx'
+        if not model.is_file():
+            model = model_dir / 'model.int8.onnx'
         tokens = model_dir / 'tokens.txt'
         if not model.is_file() or model.stat().st_size < 10_000_000 or not tokens.is_file():
-            raise FileNotFoundError(f'Modelo INT8 incompleto em {model_dir}; execute a Fase 2 primeiro')
+            raise FileNotFoundError(f'Modelo ONNX incompleto em {model_dir}')
         self.recognizer = sherpa_onnx.OfflineRecognizer.from_nemo_ctc(
             model=str(model), tokens=str(tokens), num_threads=threads,
             sample_rate=16000, feature_dim=80, decoding_method='greedy_search',

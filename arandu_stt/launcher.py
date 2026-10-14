@@ -10,7 +10,7 @@ import sys
 import time
 
 from inventory_sync import minimal_inventory, sync_inventory
-from model_download import ensure_model
+from model_download import ADAPTED_VERSION, ensure_model
 
 DATA = Path("/data")
 OPTIONS = DATA / "options.json"
@@ -19,7 +19,7 @@ MODEL_DIR = DATA / "models" / "int8"
 
 
 def options() -> dict:
-    defaults = {"threads": 2, "padding_ms": 0, "profile": "full", "debug_text": False, "refresh_inventory": True,
+    defaults = {"model_variant": "adapted", "threads": 2, "padding_ms": 0, "profile": "full", "debug_text": False, "refresh_inventory": True,
                 "lexical_enabled": True, "closed_vocabulary": True, "generic_weight": 7,
                 "home_assistant_weight": 10, "inventory_refresh_seconds": 60}
     if OPTIONS.is_file():
@@ -49,12 +49,14 @@ def refresh_inventory(required: bool) -> None:
 
 def main() -> None:
     cfg = options()
-    ensure_model(MODEL_DIR)
+    variant = str(cfg.get("model_variant", "adapted"))
+    model_dir = MODEL_DIR if variant == "original" else DATA / "models" / ADAPTED_VERSION
+    ensure_model(model_dir, variant=variant)
     refresh_inventory(bool(cfg.get("refresh_inventory", True)))
 
     cmd = [
         sys.executable, "/app/server.py",
-        "--model-dir", str(MODEL_DIR),
+        "--model-dir", str(model_dir),
         "--inventory", str(INVENTORY),
         "--uri", "tcp://0.0.0.0:10350",
         "--threads", str(int(cfg.get("threads", 2))),

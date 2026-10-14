@@ -1,5 +1,13 @@
 # Changelog
 
+## 2.1.0 — 2026-10-14
+
+- Modelo FastConformer adaptado FP32 como padrão, com pesos publicados separadamente na release e SHA256 verificado no download.
+- Adaptação apenas do decoder CTC, encoder e tokenizer preservados; 36 épocas, checkpoint escolhido na época 24 pela validação.
+- WER no teste Windows permaneceu 20,00%; CER passou de 6,58% para 6,04%. Promoção solicitada pelo proprietário; sem ganho de WER comprovado.
+- Opção `model_variant: original` restaura o modelo INT8 anterior. Pesos anteriores e identificador Wyoming preservados.
+- Instalação HAOS e consumo no hardware do usuário ainda requerem validação. Consulte `arandu_stt/MODEL_2.1.md`.
+
 ## 2.0.0 — 2026-10-06
 
 - Novo corretor contextual modular, independente do FastConformer, ativo por padrão no perfil `full`.
