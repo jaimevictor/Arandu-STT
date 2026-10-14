@@ -35,6 +35,7 @@ NAME = 'arandu-fastconformer-ptbr-int8'  # Preserve Assist's existing selected m
 UPSTREAM = 'https://huggingface.co/nvidia/stt_pt_fastconformer_hybrid_large_pc'
 MAX_SECONDS = 35
 MAX_INPUT_BYTES = 2 * 16000 * MAX_SECONDS
+VERSION = '2.2.0'
 
 
 def pcm16_to_float32(pcm: bytes) -> np.ndarray:
@@ -50,7 +51,7 @@ def build_info() -> Info:
         description='FastConformer PT-BR CTC + Arandu lexical resolver',
         attribution=attribution,
         installed=True,
-        version='2.1.0',
+        version=VERSION,
         requires_external_vad=True,
         supports_transcript_streaming=False,
         models=[AsrModel(
@@ -58,7 +59,7 @@ def build_info() -> Info:
             description='FastConformer PT-BR ONNX + contextual sanitation',
             attribution=attribution,
             installed=True,
-            version='2.1.0',
+            version=VERSION,
             languages=['pt-BR', 'pt'],
         )],
     )])

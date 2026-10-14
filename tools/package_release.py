@@ -2,9 +2,10 @@
 import hashlib
 from pathlib import Path
 import zipfile
+import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = '2.0.0'
+VERSION = str(yaml.safe_load((ROOT / 'arandu_stt/config.yaml').read_text(encoding='utf-8'))['version'])
 
 
 def main():
@@ -14,14 +15,14 @@ def main():
     included = []
     top_level = ['README.md', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'repository.yaml', 'CHANGELOG.md', '.gitignore', '.gitattributes']
     files = [ROOT/file for file in top_level]
-    for directory in ('arandu_stt', '.github', 'tools'):
+    for directory in ('arandu_stt', '.github', 'tools', 'docs'):
         files.extend((ROOT/directory).rglob('*'))
     ignored_parts = {'__pycache__', '.git', '.venv', 'models', 'hub', '.idea'}
     ignored_names = {'arandu_ha_inventory.json', 'metrics.jsonl', 'options.json', '.env'}
     with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=9) as output:
         for path in sorted(files):
             relative = path.relative_to(ROOT)
-            if not path.is_file() or set(relative.parts) & ignored_parts or path.name in ignored_names or path.suffix in {'.pyc', '.log', '.onnx'}:
+            if not path.is_file() or set(relative.parts) & ignored_parts or path.name in ignored_names or path.suffix in {'.pyc', '.log', '.onnx', '.nemo', '.pt', '.ckpt', '.wav', '.ogg', '.m4a', '.mp4', '.flac'}:
                 continue
             output.write(path, f'arandu-stt-{VERSION}/' + relative.as_posix())
             included.append(relative.as_posix())

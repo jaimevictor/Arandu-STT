@@ -1,6 +1,6 @@
 # Arandu STT
 
-STT local em português do Brasil para Home Assistant Assist, usando FastConformer CTC adaptado FP32 + motor contextual Arandu e protocolo Wyoming. A versão 2.1 usa o modelo treinado como padrão; veja [resultados e reversão do modelo](MODEL_2.1.md).
+STT local em português do Brasil para Home Assistant Assist, usando FastConformer CTC adaptado FP32 + motor contextual Arandu e protocolo Wyoming. A versão 2.2 usa o novo treinamento como padrão; veja [avaliação e reversão do modelo](MODEL_2.2.md).
 
 Consulte [atualização e rollback](UPGRADE_2.0.md), [arquitetura](ARCHITECTURE_2.0.md) e [validação e limitações](REPORT_2.0.md).
 
@@ -36,6 +36,6 @@ O App consulta localmente os registries de entidades, dispositivos e áreas do s
 
 ## Modelo e licença
 
-Os pesos não são incluídos no Git. Na primeira inicialização, o App baixa o modelo adaptado da release 2.1.0. É um derivado do checkpoint `nvidia/stt_pt_fastconformer_hybrid_large_pc`, distribuído sob CC BY-NC 4.0 com atribuição NVIDIA e Arandu. A opção `original` baixa a conversão INT8 anterior.
+Os pesos não são incluídos no Git. Na primeira inicialização, o App baixa o modelo adaptado da release 2.2.0. É um derivado do checkpoint `nvidia/stt_pt_fastconformer_hybrid_large_pc`, distribuído sob CC BY-NC 4.0 com atribuição NVIDIA e Arandu. A opção `original` baixa a conversão INT8 anterior.
 
 O checkpoint upstream é **CC BY-NC 4.0**. Portanto, o uso dos pesos possui restrições de uso comercial independentes da licença do código do Arandu.

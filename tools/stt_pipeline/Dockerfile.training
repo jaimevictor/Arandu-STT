@@ -1,0 +1,6 @@
+FROM pytorch/pytorch:2.8.0-cuda12.8-cudnn9-runtime
+ENV DEBIAN_FRONTEND=noninteractive PYTHONUNBUFFERED=1 HF_HOME=/experiment/hf-cache
+RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg build-essential libsndfile1 sox git && rm -rf /var/lib/apt/lists/*
+COPY tools/stt_pipeline/requirements*.txt /tmp/dependencies/
+RUN python -m pip install --no-cache-dir -r /tmp/dependencies/requirements-export.txt
+WORKDIR /workspace

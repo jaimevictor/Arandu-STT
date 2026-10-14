@@ -1,0 +1,3 @@
+# Fast compatibility layer over the already installed training environment.
+FROM arandu-stt-training:2.5.3
+RUN python -m pip install --no-cache-dir datasets==3.6.0 pyarrow==20.0.0 peft==0.17.1 numba==0.61.2

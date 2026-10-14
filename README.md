@@ -2,9 +2,9 @@
 
 Speech-to-text local PT-BR para Home Assistant Assist.
 
-**2.1.0:** FastConformer PT-BR CTC adaptado FP32 + motor lexical contextual PT-BR + Wyoming.
+**2.2.0:** FastConformer PT-BR CTC com treinamento adicional FP32 + motor lexical contextual PT-BR + Wyoming.
 
-[Modelo treinado, resultados e reversão](arandu_stt/MODEL_2.1.md).
+[Modelo padrão, avaliação e reversão](arandu_stt/MODEL_2.2.md).
 
 O perfil `full` agora usa vocabulário fechado, candidatos indexados e beam search, com contexto HA atualizado em background.
 Pesos, política e confiança heurística são configuráveis. O modelo acústico padrão foi atualizado; o método de instalação permanece o mesmo.
@@ -13,6 +13,9 @@ Pesos, política e confiança heurística são configuráveis. O modelo acústic
 - [Arquitetura e auditoria](arandu_stt/ARCHITECTURE_2.0.md)
 - [Relatório técnico e métricas](arandu_stt/REPORT_2.0.md)
 - [Changelog](CHANGELOG.md)
+- [Preparação de gravações e fine-tuning offline](tools/stt_pipeline/README.md)
+- [Comparação web local: versão anterior × novo modelo](tools/comparison_app/README.md)
+- [Organização do checkout e comandos de desenvolvimento](docs/DEVELOPMENT.md)
 
 ## Arquitetura
 
@@ -61,7 +64,7 @@ O repositório **não contém inventário de nenhuma casa**. O App consulta loca
 - Modelo NVIDIA usado em runtime: `nvidia/stt_pt_fastconformer_hybrid_large_pc`, **CC BY-NC 4.0**.
 - Conversão INT8 baixada em runtime: `csukuangfj/sherpa-onnx-nemo-stt_pt_fastconformer_hybrid_large_pc-int8`.
 
-Os pesos derivados FP32 são distribuídos como assets da release 2.1.0, sob CC BY-NC 4.0; não são versionados no Git.
+Os pesos derivados FP32 são distribuídos como assets da release 2.2.0, sob CC BY-NC 4.0; não são versionados no Git.
 
 ## Estado
 

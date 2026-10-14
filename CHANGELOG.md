@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.2.0 — 2026-10-14
+
+- Novo modelo FP32 como padrão, promovido após avaliação prática e autorização explícita do proprietário.
+- Continuação do checkpoint 2.1 com 272 clipes sintéticos e gravações humanas anteriores, dando mais peso a “ventilador” e “Jaime”; 25 épocas e apenas decoder CTC atualizado.
+- No teste fixo de 17 gravações, WER passou de 20,00% para 18,52%. O proprietário observou melhoria significativa em suas falas reais; o teste pequeno é mantido como registro técnico, sem substituir essa avaliação.
+- Download da release 2.2.0 com novo identificador de cache e SHA256 fixado; modelos antigos e rollback ao original preservados.
+- Ferramentas de dataset, treino, geração e comparador organizadas e versionadas; documentação de desenvolvimento e treinamento centralizada.
+- CI corrigido para conferir a versão atual e executar testes do aplicativo, pipeline offline e comparador.
+
 ## 2.1.0 — 2026-10-14
 
 - Modelo FastConformer adaptado FP32 como padrão, com pesos publicados separadamente na release e SHA256 verificado no download.
